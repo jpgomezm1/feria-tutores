@@ -1,0 +1,115 @@
+{
+    "categories": {
+      "accesorios": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/bannercel1.png",
+        "stores": [
+          {
+            "name": "Tienda Accesorios 1",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
+            "url": "https://www.tiendaAccesorios1.com"
+          },
+          {
+            "name": "Tienda Accesorios 2",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bianco%20di%20Sole.png",
+            "url": "https://www.tiendaAccesorios2.com"
+          },
+          {
+            "name": "Tienda Accesorios 3",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Essencial.png",
+            "url": "https://www.tiendaAccesorios2.com"
+          },
+          {
+            "name": "Tienda Accesorios 4",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Gold%20generation.png",
+            "url": "https://www.tiendaAccesorios2.com"
+          },
+          {
+            "name": "Tienda Accesorios 5",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Joyeria%20Madrid.png",
+            "url": "https://www.tiendaAccesorios2.com"
+          },
+          {
+            "name": "Tienda Accesorios 6",
+            "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mirage%20dl%20amour.png",
+            "url": "https://www.tiendaAccesorios2.com"
+          }
+        ]
+      },
+      "cuidado": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+        "stores": [
+          {
+            "name": "Tienda Cuidado 1",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaCuidado1.png",
+            "url": "https://www.tiendaCuidado1.com"
+          },
+          {
+            "name": "Tienda Cuidado 2",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaCuidado2.png",
+            "url": "https://www.tiendaCuidado2.com"
+          }
+        ]
+      },
+      "moda": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+        "stores": [
+          {
+            "name": "Tienda Moda 1",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaModa1.png",
+            "url": "https://www.tiendaModa1.com"
+          },
+          {
+            "name": "Tienda Moda 2",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaModa2.png",
+            "url": "https://www.tiendaModa2.com"
+          }
+        ]
+      },
+      "postres": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+        "stores": [
+          {
+            "name": "Tienda Postres 1",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaPostres1.png",
+            "url": "https://www.tiendaPostres1.com"
+          },
+          {
+            "name": "Tienda Postres 2",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaPostres2.png",
+            "url": "https://www.tiendaPostres2.com"
+          }
+        ]
+      },
+      "salado": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+        "stores": [
+          {
+            "name": "Tienda Salado 1",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaSalado1.png",
+            "url": "https://www.tiendaSalado1.com"
+          },
+          {
+            "name": "Tienda Salado 2",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaSalado2.png",
+            "url": "https://www.tiendaSalado2.com"
+          }
+        ]
+      },
+      "hobbies": {
+        "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+        "stores": [
+          {
+            "name": "Tienda Hobbies 1",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaHobbies1.png",
+            "url": "https://www.tiendaHobbies1.com"
+          },
+          {
+            "name": "Tienda Hobbies 2",
+            "image": "https://storage.googleapis.com/tu-bucket/tiendaHobbies2.png",
+            "url": "https://www.tiendaHobbies2.com"
+          }
+        ]
+      }
+    }
+  }
+  
