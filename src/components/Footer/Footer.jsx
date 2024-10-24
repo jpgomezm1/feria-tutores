@@ -1,10 +1,13 @@
 import React from 'react'; 
 import { Box, Container, Grid, Link, Typography } from '@mui/material';
 import { Instagram, WhatsApp, Language } from '@mui/icons-material';
-import IrrenegroLogo from '../../assets/devby.png';
-import NavbarTexture from '../../assets/textura.png';
+
+
 
 function Footer() {
+
+    const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/textura.png';
+    const IrrenegroLogo = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/devby.png';
   return (
     <Box
       component="footer"

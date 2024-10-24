@@ -1,5 +1,6 @@
 import { createTheme } from '@mui/material/styles';
-import fondo from './assets/fondo.png'; // Ruta de la imagen de fondo
+
+const fondo = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/fondo.png';
 
 const theme = createTheme({
   palette: {

@@ -2,9 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Grid, Box, Container, useMediaQuery, useTheme } from '@mui/material';
 import { Home as HomeIcon, Map as MapIcon } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para redirigir
-import FeriaImage from '../../assets/feria-tutores.png';
-import Collab from '../../assets/match.png';
-import NavbarTexture from '../../assets/textura.png'; // Asegúrate de que la ruta sea correcta
+
 
 function Navbar() {
   const theme = useTheme();
@@ -15,6 +13,10 @@ function Navbar() {
   const handleHomeClick = () => {
     navigate('/'); // Redirige a la ruta principal (HomePage)
   };
+
+  const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/textura.png';
+  const FeriaImage = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/feria-tutores-removebg-preview.png';
+  const Collab = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/match.png';
 
   return (
     <AppBar 

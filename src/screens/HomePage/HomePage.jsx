@@ -1,17 +1,6 @@
 import React from 'react';
 import { Container, Grid, Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para redireccionar
-import mapa2 from '../../assets/mapa2.png';
-import btutores from '../../assets/banner2irr.png';
-import bannercel1 from '../../assets/bannercel2.png'; // Banner para móviles
-import mouseIcon from '../../assets/icono-click.png';
-
-import accesorios from '../../assets/categorias/accesorios.webp';
-import cuidado from '../../assets/categorias/cuiado.webp';
-import moda from '../../assets/categorias/moda.webp';
-import postres from '../../assets/categorias/postres.webp';
-import salado from '../../assets/categorias/salados.webp';
-import hobbies from '../../assets/categorias/hobbies.webp';
 
 function HomePage() {
   const theme = useTheme();
@@ -21,6 +10,19 @@ function HomePage() {
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`); // Redirige a la categoría correspondiente
   };
+
+  const btutores = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png';
+  const bannercel1 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/bannercel2.png';
+
+  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/accesorios.webp';
+  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/cuiado.webp';
+  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/moda.webp';
+  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/postres.webp';
+  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/salados.webp';
+  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/hobbies.webp';
+
+  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/mapa2.png';
+  const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png';
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>

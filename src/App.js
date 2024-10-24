@@ -7,10 +7,10 @@ import Navbar from './components/Navbar/Navbar';
 import HomePage from './screens/HomePage/HomePage';
 import Footer from './components/Footer/Footer';  // Importamos el Footer
 import CategoryScreen from './screens/CategoryScreen/CategoryScreen';
-import Loader from './assets/loader-irrelevant.gif';  // Importamos el gif del loader
 
 function App() {
   const [loading, setLoading] = useState(true); // Estado para manejar el loader
+  const Loader = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/loader-irrelevant.gif';
 
   useEffect(() => {
     // Oculta el loader después de 3 segundos
