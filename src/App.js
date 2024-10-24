@@ -1,36 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 import Navbar from './components/Navbar/Navbar';
-import HomePage from './screens/HomePage/HomePage';
-import Footer from './components/Footer/Footer';  // Importamos el Footer
-import CategoryScreen from './screens/CategoryScreen/CategoryScreen';
+
+// Lazy load components
+const HomePage = lazy(() => import('./screens/HomePage/HomePage'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
+const CategoryScreen = lazy(() => import('./screens/CategoryScreen/CategoryScreen'));
 
 function App() {
-  const [loading, setLoading] = useState(true); // Estado para manejar el loader
+  const [loading, setLoading] = useState(true);
   const Loader = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/loader-irrelevant.gif';
 
   useEffect(() => {
-    // Oculta el loader después de 3 segundos
+    // Timeout para simular un tiempo de carga de 2.5 segundos
     const timer = setTimeout(() => {
-      setLoading(false); // Ocultar el loader
-    }, 2500); // 3000 ms = 3 segundos
+      setLoading(false);
+    }, 2500);
 
-    return () => clearTimeout(timer); // Limpiamos el timer si el componente se desmonta
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
-    // Si estamos cargando, mostramos el loader
     return (
       <div 
         style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '100vh', // Ocupa toda la pantalla
-          backgroundColor: '#fff', // Color de fondo mientras carga
+          height: '100vh',
+          backgroundColor: '#fff',
         }}
       >
         <img src={Loader} alt="Cargando..." style={{ width: '500px', height: '500px' }} />
@@ -38,20 +39,18 @@ function App() {
     );
   }
 
-  // Una vez que se oculta el loader, mostramos el contenido de la app
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
         <Navbar />
-        <Routes>
-          {/* Ruta principal para la página de inicio */}
-          <Route path="/" element={<HomePage />} />
-          
-          {/* Ruta dinámica para cada categoría */}
-          <Route path="/categoria/:category" element={<CategoryScreen />} />
-        </Routes>
-        <Footer />  {/* El Footer se mantiene visible en todas las rutas */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/categoria/:category" element={<CategoryScreen />} />
+          </Routes>
+          <Footer />
+        </Suspense>
       </Router>
     </ThemeProvider>
   );
