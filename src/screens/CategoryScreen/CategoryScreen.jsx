@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Box, Grid, Typography, TextField, InputAdornment } from '@mui/material';
-import { Search } from '@mui/icons-material';
-import { useParams, useNavigate } from 'react-router-dom'; // Ahora usamos useNavigate
-import { useSwipeable } from 'react-swipeable'; // Importamos react-swipeable
+import { Container, Box, Grid, Typography, TextField, InputAdornment, IconButton } from '@mui/material';
+import { Search } from '@mui/icons-material'; // Ícono de varita mágica
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import { useParams, useNavigate } from 'react-router-dom'; 
+import { useSwipeable } from 'react-swipeable'; 
+import { motion } from 'framer-motion'; // Importamos Framer Motion para las animaciones
 import data from '../../data/categories.json';
 
-const categories = ['accesorios', 'cuidado', 'moda', 'postres', 'salado', 'hobbies']; // Array con las categorías
+const categories = ['accesorios', 'cuidado', 'moda', 'postres', 'salado', 'hobbies'];
 
 function CategoryScreen() {
-  const { category } = useParams(); // Obtenemos la categoría actual desde la URL
+  const { category } = useParams(); 
   const [categoryData, setCategoryData] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isTransitioning, setIsTransitioning] = useState(false); // Estado para la transición de salida
-  const navigate = useNavigate(); // Para navegar entre categorías
-  
+  const [isTransitioning, setIsTransitioning] = useState(false); 
+  const [shuffledStores, setShuffledStores] = useState([]); // Estado para las tiendas mezcladas
+  const [isShuffling, setIsShuffling] = useState(false); // Estado para controlar la animación de shuffle
+  const navigate = useNavigate(); 
+
   const phrases = [
     "¡Aquí está lo que realmente quieres...!",
     "Descubre tiendas que te van a volar la cabeza...",
@@ -50,10 +54,10 @@ function CategoryScreen() {
   }, [currentPhrase, isDeleting, loopNum, typingSpeed, phrases]);
 
   useEffect(() => {
-    // Cargamos la información de la categoría desde el JSON cuando no está en transición
     if (!isTransitioning) {
       const selectedCategory = data.categories[category];
       setCategoryData(selectedCategory);
+      setShuffledStores(selectedCategory.stores); // Inicialmente cargamos las tiendas sin mezclar
     }
   }, [category, isTransitioning]);
 
@@ -72,27 +76,35 @@ function CategoryScreen() {
     }
   };
 
-  // Función que inicia la transición de salida y navega a la nueva categoría
   const initiateTransition = (newCategoryPath) => {
-    setIsTransitioning(true); // Inicia el fade-out
+    setIsTransitioning(true); 
     setTimeout(() => {
-      navigate(newCategoryPath); // Navega a la nueva categoría después del fade-out
-      setIsTransitioning(false); // Reactiva el fade-in cuando se cargue la nueva categoría
-    }, 500); // Duración del fade-out
+      navigate(newCategoryPath); 
+      setIsTransitioning(false); 
+    }, 500); 
   };
 
-  // Configuración del swipe
+  // Función para mezclar el array de tiendas
+  const shuffleStores = () => {
+    setIsShuffling(true); // Inicia la animación de shuffle
+    setTimeout(() => {
+      const shuffled = [...shuffledStores].sort(() => Math.random() - 0.5); // Algoritmo de barajado simple
+      setShuffledStores(shuffled); 
+      setIsShuffling(false); // Finaliza la animación de shuffle
+    }, 500); // Añadimos un pequeño retraso para que se vea la animación
+  };
+
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipe('left'),
     onSwipedRight: () => handleSwipe('right'),
-    trackMouse: true, // También detecta gestos con el mouse
+    trackMouse: true, 
   });
 
   if (!categoryData) {
     return <Typography variant="h4">Cargando...</Typography>;
   }
 
-  const filteredStores = categoryData.stores.filter(store =>
+  const filteredStores = shuffledStores.filter(store =>
     store.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -101,8 +113,9 @@ function CategoryScreen() {
       maxWidth="lg"
       {...handlers}
       sx={{
-        opacity: isTransitioning ? 0 : 1, // Controla el fade-in y fade-out
-        transition: 'opacity 0.5s ease-in-out', // Aplica la transición de opacidad
+        opacity: isTransitioning ? 0 : 1, 
+        transition: 'opacity 0.5s ease-in-out', 
+        position: 'relative'
       }}
     >
       {/* Banner de la categoría */}
@@ -115,7 +128,7 @@ function CategoryScreen() {
       </Box>
 
       {/* Barra de búsqueda */}
-      <Box sx={{ mb: 4 }}>
+      <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between' }}>
         <TextField
           variant="outlined"
           placeholder={currentPhrase}
@@ -138,31 +151,46 @@ function CategoryScreen() {
             ),
           }}
         />
+
+        {/* Botón para mezclar las cards */}
+        <motion.div
+          whileTap={{ rotate: 360 }} // Animación de rotación cuando se hace clic
+        >
+          <IconButton onClick={shuffleStores} sx={{ ml: 2, color: 'white' }}>
+            <AutoFixHighIcon fontSize="large" />
+          </IconButton>
+        </motion.div>
       </Box>
 
       {/* Tiendas de la categoría */}
       <Grid container spacing={4} sx={{ mb: 3 }}>
         {filteredStores.map((store, index) => (
           <Grid item xs={6} sm={6} md={4} key={index}>
-            <Box 
-              sx={{
-                overflow: 'hidden', 
-                borderRadius: '8px', 
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                '&:hover': {
-                  transform: 'scale(1.05)', 
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                }
-              }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }} // Estado inicial de las cards
+              animate={{ opacity: 1, scale: 1 }} // Estado animado de las cards
+              transition={{ duration: 0.5, delay: index * 0.1 }} // Delay para hacer que aparezcan en cascada
             >
-              <a href={store.url} target="_blank" rel="noopener noreferrer">
-                <img 
-                  src={store.image} 
-                  alt={store.name} 
-                  style={{ width: '100%', borderRadius: '8px' }} 
-                />
-              </a>
-            </Box>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)', 
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  }
+                }}
+              >
+                <a href={store.url} target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src={store.image} 
+                    alt={store.name} 
+                    style={{ width: '100%', borderRadius: '8px' }} 
+                  />
+                </a>
+              </Box>
+            </motion.div>
           </Grid>
         ))}
       </Grid>

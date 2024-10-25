@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 
-const fondo = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/fondo.png';
+const fondo = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/fondo.webp';
 
 const theme = createTheme({
   palette: {

@@ -1,13 +1,9 @@
 {
     "categories": {
-        "acesorios": {
+        "accesorios": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
             "stores": [
-                {
-                    "name": "Avellana",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Avellana.png",
-                    "url": "https://shop.zeendr.com/avellana"
-                },
+               
                 {
                     "name": "Badu Brand",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bad%C3%BA%20Brand.png",
@@ -24,14 +20,14 @@
                     "url": "https://shop.zeendr.com/brezza"
                 },
                 {
+                    "name": "Aluva Collection",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
+                    "url": "https://shop.zeendr.com/aluva"
+                },
+                {
                     "name": "enilo",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Enilo.png",
                     "url": "https://shop.zeendr.com/enilo"
-                },
-                {
-                    "name": "Essencial",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Essencial.png",
-                    "url": "https://shop.zeendr.com/essencial"
                 },
                 {
                     "name": "ISMO",
@@ -39,9 +35,9 @@
                     "url": "https://shop.zeendr.com/ismo"
                 },
                 {
-                    "name": "iv Tote bags",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_IVBags.png",
-                    "url": "https://shop.zeendr.com/ivbags"
+                    "name": "Avellana",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Avellana.png",
+                    "url": "https://shop.zeendr.com/avellana"
                 },
                 {
                     "name": "Joyeria Madrid",
@@ -69,6 +65,11 @@
                     "url": "https://shop.zeendr.com/luganzo"
                 },
                 {
+                    "name": "Amarilla gafas",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
+                    "url": "https://shop.zeendr.com/gafasamarillas"
+                },
+                {
                     "name": "Mowa Accesorios",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mowa.png",
                     "url": "https://shop.zeendr.com/mowa"
@@ -89,24 +90,9 @@
                     "url": "https://shop.zeendr.com/suenosdecristal"
                 },
                 {
-                    "name": "UNIQUE",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Unique.png",
-                    "url": "https://shop.zeendr.com/unique"
-                },
-                {
-                    "name": "Urban Style",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Urban%20style.png",
-                    "url": "https://shop.zeendr.com/urbanstyle"
-                },
-                {
                     "name": "Valumar",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_ValuMar.png",
                     "url": "https://shop.zeendr.com/valumar"
-                },
-                {
-                    "name": "VAMBAS",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_VMB.png",
-                    "url": "https://shop.zeendr.com/vambas"
                 },
                 {
                     "name": "Veintid\u00f3s",
@@ -127,16 +113,6 @@
                     "name": "Accesorios fortunatta",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Fortunatta.png",
                     "url": "https://shop.zeendr.com/fortunatta"
-                },
-                {
-                    "name": "Aluva Collection",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
-                    "url": "https://shop.zeendr.com/aluva"
-                },
-                {
-                    "name": "Amarilla gafas",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
-                    "url": "https://shop.zeendr.com/gafasamarillas"
                 }
             ]
         },
@@ -182,6 +158,11 @@
                     "name": "Benjam\u00edn bot\u00f3n",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-14.png",
                     "url": "https://shop.zeendr.com/benjaminboton"
+                },
+                {
+                    "name": "Aluva Collection",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
+                    "url": "https://shop.zeendr.com/aluva"
                 },
                 {
                     "name": "Biobosques",
@@ -254,6 +235,11 @@
                     "url": "https://shop.zeendr.com/adm"
                 },
                 {
+                    "name": "Bianco di Sole",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bianco%20di%20Sole.png",
+                    "url": "https://shop.zeendr.com/biancodisole"
+                },
+                {
                     "name": "APC",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-12.png",
                     "url": "https://shop.zeendr.com/apc"
@@ -264,9 +250,34 @@
                     "url": "https://shop.zeendr.com/coco"
                 },
                 {
+                    "name": "Urban Style",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Urban%20style.png",
+                    "url": "https://shop.zeendr.com/urbanstyle"
+                },
+                {
+                    "name": "iv Tote bags",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_IVBags.png",
+                    "url": "https://shop.zeendr.com/ivbags"
+                },
+                {
+                    "name": "Essencial",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Essencial.png",
+                    "url": "https://shop.zeendr.com/essencial"
+                },
+                {
+                    "name": "UNIQUE",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Unique.png",
+                    "url": "https://shop.zeendr.com/unique"
+                },
+                {
                     "name": "DNGL streetwear",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_DNGL.png",
                     "url": "https://shop.zeendr.com/dngl"
+                },
+                {
+                    "name": "Amarilla gafas",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
+                    "url": "https://shop.zeendr.com/gafasamarillas"
                 },
                 {
                     "name": "Drivezeniths",
@@ -289,6 +300,11 @@
                     "url": "https://shop.zeendr.com/melimiel"
                 },
                 {
+                    "name": "VAMBAS",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_VMB.png",
+                    "url": "https://shop.zeendr.com/vambas"
+                },
+                {
                     "name": "Rich clothing",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Rich%20clothing.png",
                     "url": "https://shop.zeendr.com/richclothing"
@@ -307,6 +323,11 @@
                     "name": "Alandetty Bakety",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ab.png",
                     "url": "https://shop.zeendr.com/alandetty"
+                },
+                {
+                    "name": "Lucca",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
+                    "url": "https://shop.zeendr.com/lucca"
                 },
                 {
                     "name": "BAKEAT",
@@ -374,11 +395,6 @@
                     "url": "https://shop.zeendr.com/lelachocolates"
                 },
                 {
-                    "name": "Lucca",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
-                    "url": "https://shop.zeendr.com/lucca"
-                },
-                {
                     "name": "Lush & blossom cakeshop",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lush%20Blossom.png",
                     "url": "https://shop.zeendr.com/lushblossom"
@@ -427,6 +443,11 @@
                     "name": "CIAO",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ciao.png",
                     "url": "https://shop.zeendr.com/ciao"
+                },
+                {
+                    "name": "Lucca",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
+                    "url": "https://shop.zeendr.com/lucca"
                 },
                 {
                     "name": "Diptacho",

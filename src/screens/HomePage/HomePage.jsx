@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Grid, Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para redireccionar
 
 function HomePage() {
@@ -7,29 +7,53 @@ function HomePage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta si es pantalla pequeña (sm o menor)
   const navigate = useNavigate(); // Usamos useNavigate para redirigir al usuario
 
+  // Imágenes de banners para rotar
+  const desktopBanners = [
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-pc2.webp',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp'
+  ];
+
+  const mobileBanners = [
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp'
+  ];
+
+  // Estado para controlar el índice del banner actual
+  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
+
+  // Cambiar banner cada 10 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % desktopBanners.length);
+    }, 5000); // Cambia cada 10 segundos
+    return () => clearInterval(interval); // Limpia el intervalo cuando se desmonta el componente
+  }, [desktopBanners.length]);
+
+  // Maneja el banner a mostrar según el tamaño de la pantalla
+  const currentBanner = isMobile ? mobileBanners[currentBannerIndex] : desktopBanners[currentBannerIndex];
+
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`); // Redirige a la categoría correspondiente
   };
 
-  const btutores = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png';
-  const bannercel1 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/bannercel2.png';
+  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp';
+  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp';
+  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp';
+  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-dulces.webp';
+  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp';
+  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp';
 
-  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/accesorios.webp';
-  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/cuiado.webp';
-  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/moda.webp';
-  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/postres.webp';
-  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/salados.webp';
-  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/hobbies.webp';
-
-  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/mapa2.png';
+  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/mapa2.webp';
   const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png';
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>
-      {/* Banner principal superior */}
+      {/* Banner principal superior con cambio automático */}
       <Box sx={{ mb: 4 }}>
         <img 
-          src={isMobile ? bannercel1 : btutores} // Cambia el banner según el tamaño de la pantalla
+          src={currentBanner} // Cambia el banner dinámicamente cada 10 segundos
           alt="Banner Tutores" 
           style={{ 
             width: '100%', 
@@ -43,150 +67,154 @@ function HomePage() {
       <Grid container spacing={4}>
         {/* Columna izquierda: Categorías */}
         <Grid item xs={12} md={8}>
-          <Box sx={{ backgroundColor: '#f0f0f0', padding: 2, borderRadius: '8px' }}>
-            <Typography variant='h1' sx={{ marginBottom: 2, color: '#203251' }}>
-              Categorías
-            </Typography>
-            <Grid container spacing={2}>
-              {/* Tarjeta de Accesorios */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)', // Aumenta ligeramente el tamaño
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Añade una sombra
-                    },
-                    cursor: 'pointer' // Cambiamos el cursor a pointer
-                  }}
-                  onClick={() => handleCategoryClick('accesorios')} // Redirige a la categoría accesorios
-                >
-                  <img 
-                    src={accesorios}
-                    alt="Accesorios"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-
-              {/* Tarjeta de Cuidado */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    },
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => handleCategoryClick('cuidado')} // Redirige a la categoría cuidado
-                >
-                  <img 
-                    src={cuidado} 
-                    alt="Cuidado"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-
-              {/* Tarjeta de Moda */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    },
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => handleCategoryClick('moda')} // Redirige a la categoría moda
-                >
-                  <img 
-                    src={moda}
-                    alt="Moda"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-
-              {/* Tarjeta de Postres */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    },
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => handleCategoryClick('postres')} // Redirige a la categoría postres
-                >
-                  <img 
-                    src={postres} 
-                    alt="Postres"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-
-              {/* Tarjeta de Salado */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    },
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => handleCategoryClick('salado')} // Redirige a la categoría salado
-                >
-                  <img 
-                    src={salado} 
-                    alt="Salado"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-
-              {/* Tarjeta de Hobbies */}
-              <Grid item xs={6} sm={4}>
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    },
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => handleCategoryClick('hobbies')} // Redirige a la categoría hobbies
-                >
-                  <img 
-                    src={hobbies} 
-                    alt="Hobbies"
-                    style={{ width: '100%', borderRadius: '8px' }}
-                  />
-                </Box>
-              </Grid>
-            </Grid>
+          {/* Reemplazamos el texto de Categorías con la imagen */}
+          <Box sx={{ mb: 2 }}>
+            <img 
+              src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/CATEGORIAS%20TEXTO-07.png"
+              alt="Categorías"
+              style={{ width: '37%', height: 'auto' }}
+            />
           </Box>
+
+          <Grid container spacing={2}>
+            {/* Tarjeta de Accesorios */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)', // Aumenta ligeramente el tamaño
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Añade una sombra
+                  },
+                  cursor: 'pointer' // Cambiamos el cursor a pointer
+                }}
+                onClick={() => handleCategoryClick('accesorios')} // Redirige a la categoría accesorios
+              >
+                <img 
+                  src={accesorios}
+                  alt="Accesorios"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+
+            {/* Tarjeta de Cuidado */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                  cursor: 'pointer'
+                }}
+                onClick={() => handleCategoryClick('cuidado')} // Redirige a la categoría cuidado
+              >
+                <img 
+                  src={cuidado} 
+                  alt="Cuidado"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+
+            {/* Tarjeta de Moda */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                  cursor: 'pointer'
+                }}
+                onClick={() => handleCategoryClick('moda')} // Redirige a la categoría moda
+              >
+                <img 
+                  src={moda}
+                  alt="Moda"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+
+            {/* Tarjeta de Postres */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                  cursor: 'pointer'
+                }}
+                onClick={() => handleCategoryClick('postres')} // Redirige a la categoría postres
+              >
+                <img 
+                  src={postres} 
+                  alt="Postres"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+
+            {/* Tarjeta de Salado */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                  cursor: 'pointer'
+                }}
+                onClick={() => handleCategoryClick('salado')} // Redirige a la categoría salado
+              >
+                <img 
+                  src={salado} 
+                  alt="Salado"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+
+            {/* Tarjeta de Hobbies */}
+            <Grid item xs={6} sm={4}>
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  },
+                  cursor: 'pointer'
+                }}
+                onClick={() => handleCategoryClick('hobbies')} // Redirige a la categoría hobbies
+              >
+                <img 
+                  src={hobbies} 
+                  alt="Hobbies"
+                  style={{ width: '100%', borderRadius: '8px' }}
+                />
+              </Box>
+            </Grid>
+          </Grid>
         </Grid>
 
         {/* Columna derecha: Banner único con botón y animación del mouse */}
