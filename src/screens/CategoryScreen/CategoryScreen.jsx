@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Box, Grid, Typography, TextField, InputAdornment, IconButton } from '@mui/material';
-import { Search } from '@mui/icons-material'; // Ícono de varita mágica
+import { Search } from '@mui/icons-material';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
-import { useParams, useNavigate } from 'react-router-dom'; 
-import { useSwipeable } from 'react-swipeable'; 
-import { motion } from 'framer-motion'; // Importamos Framer Motion para las animaciones
+import { useParams, useNavigate } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
+import { motion } from 'framer-motion';
 import data from '../../data/categories.json';
 
 const categories = ['accesorios', 'cuidado', 'moda', 'postres', 'salado', 'hobbies'];
 
 function CategoryScreen() {
-  const { category } = useParams(); 
+  const { category } = useParams();
   const [categoryData, setCategoryData] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isTransitioning, setIsTransitioning] = useState(false); 
-  const [shuffledStores, setShuffledStores] = useState([]); // Estado para las tiendas mezcladas
-  const [isShuffling, setIsShuffling] = useState(false); // Estado para controlar la animación de shuffle
-  const navigate = useNavigate(); 
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [shuffledStores, setShuffledStores] = useState([]);
+  const [isShuffling, setIsShuffling] = useState(false);
+  const [showScrollHint, setShowScrollHint] = useState(true);
+  const navigate = useNavigate();
 
   const phrases = [
     "¡Aquí está lo que realmente quieres...!",
@@ -57,15 +58,22 @@ function CategoryScreen() {
     if (!isTransitioning) {
       const selectedCategory = data.categories[category];
       setCategoryData(selectedCategory);
-      setShuffledStores(selectedCategory.stores); // Inicialmente cargamos las tiendas sin mezclar
+      setShuffledStores(selectedCategory.stores);
+      window.scrollTo(0, 0);
     }
   }, [category, isTransitioning]);
+
+  useEffect(() => {
+    const hintTimeout = setTimeout(() => {
+      setShowScrollHint(false);
+    }, 5000);
+    return () => clearTimeout(hintTimeout);
+  }, []);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
 
-  // Función para cambiar de categoría cuando se hace un swipe
   const handleSwipe = (direction) => {
     const currentIndex = categories.indexOf(category);
     
@@ -77,28 +85,31 @@ function CategoryScreen() {
   };
 
   const initiateTransition = (newCategoryPath) => {
-    setIsTransitioning(true); 
+    setIsTransitioning(true);
     setTimeout(() => {
-      navigate(newCategoryPath); 
-      setIsTransitioning(false); 
-    }, 500); 
+      navigate(newCategoryPath);
+      setIsTransitioning(false);
+    }, 500);
   };
 
-  // Función para mezclar el array de tiendas
   const shuffleStores = () => {
-    setIsShuffling(true); // Inicia la animación de shuffle
+    setIsShuffling(true);
     setTimeout(() => {
-      const shuffled = [...shuffledStores].sort(() => Math.random() - 0.5); // Algoritmo de barajado simple
-      setShuffledStores(shuffled); 
-      setIsShuffling(false); // Finaliza la animación de shuffle
-    }, 500); // Añadimos un pequeño retraso para que se vea la animación
+      const shuffled = [...shuffledStores].sort(() => Math.random() - 0.5);
+      setShuffledStores(shuffled);
+      setIsShuffling(false);
+    }, 500);
   };
 
   const handlers = useSwipeable({
     onSwipedLeft: () => handleSwipe('left'),
     onSwipedRight: () => handleSwipe('right'),
-    trackMouse: true, 
+    trackMouse: true,
   });
+
+  const hideScrollHint = () => {
+    if (showScrollHint) setShowScrollHint(false);
+  };
 
   if (!categoryData) {
     return <Typography variant="h4">Cargando...</Typography>;
@@ -108,93 +119,140 @@ function CategoryScreen() {
     store.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Configuración de animación
+  const transitionVariants = {
+    initial: { opacity: 0, y: 20, scale: 0.95 },
+    animate: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: -20, scale: 0.95 }
+  };
+
   return (
-    <Container
-      maxWidth="lg"
-      {...handlers}
-      sx={{
-        opacity: isTransitioning ? 0 : 1, 
-        transition: 'opacity 0.5s ease-in-out', 
-        position: 'relative'
-      }}
+    <motion.div
+      variants={transitionVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
     >
-      {/* Banner de la categoría */}
-      <Box sx={{ mt: 6, mb: 4 }}>
-        <img 
-          src={categoryData.banner} 
-          alt={`${category} banner`} 
-          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-        />
-      </Box>
+      <Container
+        maxWidth="lg"
+        {...handlers}
+        sx={{
+          opacity: isTransitioning ? 0 : 1,
+          transition: 'opacity 0.5s ease-in-out',
+          position: 'relative'
+        }}
+        onClick={hideScrollHint}
+        onTouchStart={hideScrollHint}
+      >
+        {showScrollHint && (
+          <Box
+            sx={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 10,
+              color: 'black',
+            }}
+          >
+            <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+              Muévete entre categorías
+            </Typography>
+            <img 
+              src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/scroll-unscreen.gif" 
+              alt="Scroll hint" 
+              style={{ width: '80px', height: 'auto' }}
+            />
+          </Box>
+        )}
 
-      {/* Barra de búsqueda */}
-      <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between' }}>
-        <TextField
-          variant="outlined"
-          placeholder={currentPhrase}
-          value={searchTerm}
-          onChange={handleSearch}
-          fullWidth
-          sx={{
-            backgroundColor: 'white',
-            borderRadius: '50px',
-            boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-            '& .MuiOutlinedInput-root': {
+        <Box sx={{ mt: 6, mb: 4 }}>
+          <motion.img 
+            src={categoryData.banner} 
+            alt={`${category} banner`} 
+            style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          />
+        </Box>
+
+        <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between' }}>
+          <TextField
+            variant="outlined"
+            placeholder={currentPhrase}
+            value={searchTerm}
+            onChange={handleSearch}
+            fullWidth
+            sx={{
+              backgroundColor: 'white',
               borderRadius: '50px',
-            },
-          }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search />
-              </InputAdornment>
-            ),
-          }}
-        />
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+              '& .MuiOutlinedInput-root': {
+                borderRadius: '50px',
+              },
+            }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <Search />
+                </InputAdornment>
+              ),
+            }}
+          />
 
-        {/* Botón para mezclar las cards */}
-        <motion.div
-          whileTap={{ rotate: 360 }} // Animación de rotación cuando se hace clic
-        >
-          <IconButton onClick={shuffleStores} sx={{ ml: 2, color: 'white' }}>
-            <AutoFixHighIcon fontSize="large" />
-          </IconButton>
-        </motion.div>
-      </Box>
+          <motion.div whileTap={{ rotate: 360 }}>
+            <IconButton onClick={shuffleStores} sx={{ ml: 2, color: 'white' }}>
+              <AutoFixHighIcon fontSize="large" />
+            </IconButton>
+          </motion.div>
+        </Box>
 
-      {/* Tiendas de la categoría */}
-      <Grid container spacing={4} sx={{ mb: 3 }}>
-        {filteredStores.map((store, index) => (
-          <Grid item xs={6} sm={6} md={4} key={index}>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }} // Estado inicial de las cards
-              animate={{ opacity: 1, scale: 1 }} // Estado animado de las cards
-              transition={{ duration: 0.5, delay: index * 0.1 }} // Delay para hacer que aparezcan en cascada
-            >
-              <Box 
-                sx={{
-                  overflow: 'hidden', 
-                  borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)', 
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  }
-                }}
+        <Grid container spacing={4} sx={{ mb: 3 }}>
+          {filteredStores.map((store, index) => (
+            <Grid item xs={6} sm={6} md={4} key={index}>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <a href={store.url} target="_blank" rel="noopener noreferrer">
-                  <img 
-                    src={store.image} 
-                    alt={store.name} 
-                    style={{ width: '100%', borderRadius: '8px' }} 
-                  />
-                </a>
-              </Box>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+                <Box 
+                  sx={{
+                    overflow: 'hidden', 
+                    borderRadius: '8px', 
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                    '&:hover': {
+                      transform: 'scale(1.05)', 
+                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                    }
+                  }}
+                  onClick={(e) => {
+                    if (showScrollHint) {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <a href={store.url} target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src={store.image} 
+                      alt={store.name} 
+                      style={{ width: '100%', borderRadius: '8px' }} 
+                    />
+                  </a>
+                </Box>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </motion.div>
   );
 }
 
