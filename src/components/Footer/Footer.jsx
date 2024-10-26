@@ -6,7 +6,7 @@ import { Instagram, WhatsApp, Language } from '@mui/icons-material';
 
 function Footer() {
 
-    const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/textura.png';
+    const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/FOOTERS%20WEBP_PC.webp';
     const IrrenegroLogo = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/devby.png';
   return (
     <Box

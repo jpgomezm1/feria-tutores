@@ -14,7 +14,7 @@ function Navbar() {
     navigate('/'); // Redirige a la ruta principal (HomePage)
   };
 
-  const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/textura.png';
+  const NavbarTexture = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/FOOTERS%20WEBP_PC.webp';
   const FeriaImage = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/feria-tutores-removebg-preview.png';
   const Collab = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/match.png';
 

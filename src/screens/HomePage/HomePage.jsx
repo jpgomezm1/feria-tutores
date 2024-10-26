@@ -45,7 +45,7 @@ function HomePage() {
   const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp';
   const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp';
 
-  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/mapa2.webp';
+  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Banner%20mapa%20nuevo%20wepb_Mesa%20de%20trabajo%201.webp';
   const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png';
 
   return (

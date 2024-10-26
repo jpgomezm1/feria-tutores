@@ -1,14 +1,12 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 import Navbar from './components/Navbar/Navbar';
-
-// Lazy load components
-const HomePage = lazy(() => import('./screens/HomePage/HomePage'));
-const Footer = lazy(() => import('./components/Footer/Footer'));
-const CategoryScreen = lazy(() => import('./screens/CategoryScreen/CategoryScreen'));
+import HomePage from './screens/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
+import CategoryScreen from './screens/CategoryScreen/CategoryScreen';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,13 +42,11 @@ function App() {
       <CssBaseline />
       <Router>
         <Navbar />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/categoria/:category" element={<CategoryScreen />} />
-          </Routes>
-          <Footer />
-        </Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/categoria/:category" element={<CategoryScreen />} />
+        </Routes>
+        <Footer />
       </Router>
     </ThemeProvider>
   );

@@ -20,9 +20,9 @@ function CategoryScreen() {
   const navigate = useNavigate();
 
   const phrases = [
-    "¡Aquí está lo que realmente quieres...!",
-    "Descubre tiendas que te van a volar la cabeza...",
-    "Apoya a los emprendedores que están cambiando las reglas..."
+    "¡Aquí está lo que quieres...!",
+    "Descubre las tiendas...",
+    "Apoya a los emprendedores..."
   ];
 
   const [currentPhrase, setCurrentPhrase] = useState('');
