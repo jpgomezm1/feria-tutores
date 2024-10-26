@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Grid, Box, Button, useMediaQuery, useTheme } from '@mui/material';
-import { useNavigate } from 'react-router-dom'; // Importamos useNavigate para redireccionar
+import { useNavigate } from 'react-router-dom';
+import MapDialog from './MapDialog'; // Importamos el componente MapDialog
 
 function HomePage() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta si es pantalla pequeña (sm o menor)
-  const navigate = useNavigate(); // Usamos useNavigate para redirigir al usuario
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const navigate = useNavigate();
+
+  // Estado para controlar la visibilidad de MapDialog
+  const [isMapDialogOpen, setIsMapDialogOpen] = useState(false);
 
   // Imágenes de banners para rotar (agregamos un parámetro de cache busting)
   const desktopBanners = [
@@ -37,6 +41,10 @@ function HomePage() {
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`); // Redirige a la categoría correspondiente
   };
+
+  // Funciones para manejar la apertura y cierre de MapDialog
+  const openMapDialog = () => setIsMapDialogOpen(true);
+  const closeMapDialog = () => setIsMapDialogOpen(false);
 
   // Imágenes de categorías con cache busting
   const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp?v=1';
@@ -229,6 +237,7 @@ function HomePage() {
             <Button 
               variant="contained" 
               color="primary" 
+              onClick={openMapDialog} // Abre el diálogo del mapa al hacer clic
               sx={{
                 textTransform: 'none',
                 position: 'absolute',
@@ -240,6 +249,7 @@ function HomePage() {
                 padding: '10px 20px',
                 minWidth: '250px',
                 borderRadius: '22px',
+                fontWeight: 'bold'
               }}
             >
               Descubre el mapa de la feria
@@ -262,10 +272,13 @@ function HomePage() {
         </Grid>
       </Grid>
 
+      {/* Renderizamos MapDialog con propiedades de apertura y cierre */}
+      <MapDialog open={isMapDialogOpen} onClose={closeMapDialog} />
+
       {/* Estilo para la animación de rebote */}
       <style>
-        {`
-          @keyframes bounce {
+        {
+          `@keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
               transform: translateY(0);
             }
@@ -275,8 +288,8 @@ function HomePage() {
             60% {
               transform: translateY(-5px);
             }
-          }
-        `}
+          }`
+        }
       </style>
     </Container>
   );
