@@ -2,6 +2,7 @@
     "categories": {
         "accesorios": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-accesorios.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-accesorios-cel.webp",
             "stores": [
                
                 {
@@ -118,6 +119,7 @@
         },
         "cuidado": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-cuidado.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-cuidado-cel.webp",
             "stores": [
                 {
                     "name": "Botanika candles",
@@ -153,6 +155,7 @@
         },
         "hobbies": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-hobbies.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-hobbies-cel.webp",
             "stores": [
                 {
                     "name": "Benjam\u00edn bot\u00f3n",
@@ -228,6 +231,7 @@
         },
         "moda": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-moda.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-moda-cel.webp",
             "stores": [
                 {
                     "name": "admclothess",
@@ -318,6 +322,7 @@
         },
         "postres": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-dulce.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-dulce-cel.webp",
             "stores": [
                 {
                     "name": "Alandetty Bakety",
@@ -423,6 +428,7 @@
         },
         "salado": {
             "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-salados.webp",
+            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-salados-cel.webp",
             "stores": [
                 {
                     "name": "Arepas triple queso Las Rellenitas",

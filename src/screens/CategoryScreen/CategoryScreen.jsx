@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Box, Grid, Typography, TextField, InputAdornment, IconButton } from '@mui/material';
+import { Container, Box, Grid, Typography, TextField, InputAdornment, IconButton, useMediaQuery } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -18,6 +18,7 @@ function CategoryScreen() {
   const [isShuffling, setIsShuffling] = useState(false);
   const [showScrollHint, setShowScrollHint] = useState(true);
   const navigate = useNavigate();
+  const isMobile = useMediaQuery('(max-width:600px)'); // Detecta si la pantalla es pequeña
 
   const phrases = [
     "¡Aquí está lo que quieres...!",
@@ -175,7 +176,7 @@ function CategoryScreen() {
 
         <Box sx={{ mt: 6, mb: 4 }}>
           <motion.img 
-            src={categoryData.banner} 
+            src={isMobile ? categoryData['banner-movil'] : categoryData.banner} 
             alt={`${category} banner`} 
             style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
             initial={{ opacity: 0 }}
