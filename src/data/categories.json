@@ -1,7 +1,7 @@
 {
     "categories": {
         "accesorios": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-accesorios.webp",
             "stores": [
                
                 {
@@ -117,7 +117,7 @@
             ]
         },
         "cuidado": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-cuidado.webp",
             "stores": [
                 {
                     "name": "Botanika candles",
@@ -152,7 +152,7 @@
             ]
         },
         "hobbies": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-hobbies.webp",
             "stores": [
                 {
                     "name": "Benjam\u00edn bot\u00f3n",
@@ -317,7 +317,7 @@
             ]
         },
         "postres": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-dulce.webp",
             "stores": [
                 {
                     "name": "Alandetty Bakety",
@@ -422,7 +422,7 @@
             ]
         },
         "salado": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-salados.webp",
             "stores": [
                 {
                     "name": "Arepas triple queso Las Rellenitas",
