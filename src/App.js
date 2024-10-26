@@ -1,3 +1,4 @@
+import 'intersection-observer'; // Polyfill para mejorar compatibilidad en Safari
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -5,15 +6,15 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './screens/HomePage/HomePage';
-import Footer from './components/Footer/Footer';
 import CategoryScreen from './screens/CategoryScreen/CategoryScreen';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const Loader = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/loader-irrelevant.gif';
+  // Cache busting query string para evitar problemas de cache
+  const Loader = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/loader-irrelevant.gif?v=1';
 
   useEffect(() => {
-    // Timeout para simular un tiempo de carga de 2.5 segundos
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);

@@ -7,17 +7,17 @@ function HomePage() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Detecta si es pantalla pequeña (sm o menor)
   const navigate = useNavigate(); // Usamos useNavigate para redirigir al usuario
 
-  // Imágenes de banners para rotar
+  // Imágenes de banners para rotar (agregamos un parámetro de cache busting)
   const desktopBanners = [
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-pc2.webp',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp'
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-pc2.webp?v=1',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1'
   ];
 
   const mobileBanners = [
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp'
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp?v=1',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1',
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1'
   ];
 
   // Estado para controlar el índice del banner actual
@@ -38,15 +38,16 @@ function HomePage() {
     navigate(`/categoria/${category}`); // Redirige a la categoría correspondiente
   };
 
-  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp';
-  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp';
-  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp';
-  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-dulces.webp';
-  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp';
-  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp';
+  // Imágenes de categorías con cache busting
+  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp?v=1';
+  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp?v=1';
+  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp?v=1';
+  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-dulces.webp?v=1';
+  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp?v=1';
+  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp?v=1';
 
-  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Banner%20mapa%20nuevo%20wepb_Mesa%20de%20trabajo%201.webp';
-  const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png';
+  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Banner%20mapa%20nuevo%20wepb_Mesa%20de%20trabajo%201.webp?v=1';
+  const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png?v=1';
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>
@@ -70,7 +71,7 @@ function HomePage() {
           {/* Reemplazamos el texto de Categorías con la imagen */}
           <Box sx={{ mb: 2 }}>
             <img 
-              src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/CATEGORIAS%20TEXTO-07.png"
+              src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/CATEGORIAS%20TEXTO-07.png?v=1"
               alt="Categorías"
               style={{ width: '37%', height: 'auto' }}
             />
@@ -236,7 +237,6 @@ function HomePage() {
                 transform: 'translateX(-50%)',
                 backgroundColor: '#1A1F71',
                 color: '#fff',
-                borderRadius: '8px',
                 padding: '10px 20px',
                 minWidth: '250px',
                 borderRadius: '22px',
