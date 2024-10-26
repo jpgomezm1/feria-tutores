@@ -1,499 +1,482 @@
 {
     "categories": {
         "accesorios": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-accesorios.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-accesorios-cel.webp",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/bannercel1.png",
             "stores": [
-               
                 {
-                    "name": "Badu Brand",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bad%C3%BA%20Brand.png",
-                    "url": "https://shop.zeendr.com/badubrand"
+                    "name": "Accesorios fortunatta",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Fortunatta.png",
+                    "url": "https://shop.irrelevant-club.com/fortunatta"
                 },
                 {
                     "name": "Bianco di Sole",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bianco%20di%20Sole.png",
-                    "url": "https://shop.zeendr.com/biancodisole"
-                },
-                {
-                    "name": "Brezza Di Mare Accesorios",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Brezza%20di%20mare.png",
-                    "url": "https://shop.zeendr.com/brezza"
+                    "url": "https://shop.irrelevant-club.com/biancodisole"
                 },
                 {
                     "name": "Aluva Collection",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
-                    "url": "https://shop.zeendr.com/aluva"
+                    "url": "https://shop.irrelevant-club.com/aluva"
                 },
                 {
-                    "name": "enilo",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Enilo.png",
-                    "url": "https://shop.zeendr.com/enilo"
-                },
-                {
-                    "name": "ISMO",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_ISMO.png",
-                    "url": "https://shop.zeendr.com/ismo"
+                    "name": "Amarilla gafas",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
+                    "url": "https://shop.irrelevant-club.com/gafasamarillas"
                 },
                 {
                     "name": "Avellana",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Avellana.png",
-                    "url": "https://shop.zeendr.com/avellana"
+                    "url": "https://shop.irrelevant-club.com/avellana"
                 },
                 {
-                    "name": "Joyeria Madrid",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Joyeria%20Madrid.png",
-                    "url": "https://shop.zeendr.com/joyeriamadrid"
+                    "name": "Badu Brand",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bad%C3%BA%20Brand.png",
+                    "url": "https://shop.irrelevant-club.com/badubrand"
                 },
                 {
-                    "name": "Le Charm",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Le%20charm.png",
-                    "url": "https://shop.zeendr.com/lecharm"
+                    "name": "Brezza Di Mare Accesorios",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Brezza%20di%20mare.png",
+                    "url": "https://shop.irrelevant-club.com/brezza"
                 },
                 {
-                    "name": "LG Accesorios",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lg.png",
-                    "url": "https://shop.zeendr.com/lg"
+                    "name": "enilo",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Enilo.png",
+                    "url": "https://shop.irrelevant-club.com/enilo"
                 },
                 {
-                    "name": "Liveprint.dc",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Live%20print.png",
-                    "url": "https://shop.zeendr.com/liveprint"
-                },
-                {
-                    "name": "Luganzo Accesorios",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Luganzo%20accesorios.png",
-                    "url": "https://shop.zeendr.com/luganzo"
-                },
-                {
-                    "name": "Amarilla gafas",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
-                    "url": "https://shop.zeendr.com/gafasamarillas"
-                },
-                {
-                    "name": "Mowa Accesorios",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mowa.png",
-                    "url": "https://shop.zeendr.com/mowa"
-                },
-                {
-                    "name": "Om Shanti",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Om%20shanti.png",
-                    "url": "https://shop.zeendr.com/omshanti"
-                },
-                {
-                    "name": "Renesme",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Renesme.png",
-                    "url": "https://shop.zeendr.com/renesme"
-                },
-                {
-                    "name": "Sue\u00f1os de Cristal",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Sue%C3%B1os%20de%20cristal.png",
-                    "url": "https://shop.zeendr.com/suenosdecristal"
-                },
-                {
-                    "name": "Valumar",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_ValuMar.png",
-                    "url": "https://shop.zeendr.com/valumar"
-                },
-                {
-                    "name": "Veintid\u00f3s",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ventid%C3%B3s.png",
-                    "url": "https://shop.zeendr.com/veintidos"
-                },
-                {
-                    "name": "Willow boutique",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Willow.png",
-                    "url": "https://shop.zeendr.com/willow"
-                },
-                {
-                    "name": "Zadquiel",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Buho-.png",
-                    "url": "https://shop.zeendr.com/zadquiel"
-                },
-                {
-                    "name": "Accesorios fortunatta",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Fortunatta.png",
-                    "url": "https://shop.zeendr.com/fortunatta"
-                }
-            ]
-        },
-        "cuidado": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-cuidado.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-cuidado-cel.webp",
-            "stores": [
-                {
-                    "name": "Botanika candles",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Botanika.png",
-                    "url": "https://shop.zeendr.com/botanika"
-                },
-                {
-                    "name": "By Mar\u00eda Camila",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_By%20Maria%20Camila.png",
-                    "url": "https://shop.zeendr.com/bymariacamila"
-                },
-                {
-                    "name": "Cami Giraldo Beauty",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Cami%20Giraldo%20beauty.png",
-                    "url": "https://shop.zeendr.com/camigiraldobeauty"
-                },
-                {
-                    "name": "Inefable by MJM",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Inefable.png",
-                    "url": "https://shop.zeendr.com/inefable"
-                },
-                {
-                    "name": "SOLIS",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Solis.png",
-                    "url": "https://shop.zeendr.com/solis"
-                },
-                {
-                    "name": "Vital Wellness",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Vital%20wellness%20market.png",
-                    "url": "https://shop.zeendr.com/vital"
-                }
-            ]
-        },
-        "hobbies": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-hobbies.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-hobbies-cel.webp",
-            "stores": [
-                {
-                    "name": "Benjam\u00edn bot\u00f3n",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-14.png",
-                    "url": "https://shop.zeendr.com/benjaminboton"
-                },
-                {
-                    "name": "Aluva Collection",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
-                    "url": "https://shop.zeendr.com/aluva"
-                },
-                {
-                    "name": "Biobosques",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bio%20boques.png",
-                    "url": "https://shop.zeendr.com/biobosques"
-                },
-                {
-                    "name": "Ceres velas",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ceres.png",
-                    "url": "https://shop.zeendr.com/ceres"
-                },
-                {
-                    "name": "Colposter",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Colposter.png",
-                    "url": "https://shop.zeendr.com/colposter"
-                },
-                {
-                    "name": "Cuarzo Lim\u00f3n",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Cuarzo%20lim%C3%B3n.png",
-                    "url": "https://shop.zeendr.com/cuarzolimon"
-                },
-                {
-                    "name": "Driada store",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Driada%20stores.png",
-                    "url": "https://shop.zeendr.com/driada"
-                },
-                {
-                    "name": "Eventos al instante",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Eventos%20al%20instante.png",
-                    "url": "https://shop.zeendr.com/eventosalinstante"
-                },
-                {
-                    "name": "Frido",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Frido.png",
-                    "url": "https://shop.zeendr.com/frido"
-                },
-                {
-                    "name": "La Calaca",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20Calaca.png",
-                    "url": "https://shop.zeendr.com/lacalaca"
-                },
-                {
-                    "name": "Mirage de L' amour",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mirage%20dl%20amour.png",
-                    "url": "https://shop.zeendr.com/mirage"
-                },
-                {
-                    "name": "My Card",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_My%20card.png",
-                    "url": "https://shop.zeendr.com/mycard"
-                },
-                {
-                    "name": "Plan del alma",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Plan%20Alma.png",
-                    "url": "https://shop.zeendr.com/plandelalma"
-                },
-                {
-                    "name": "Tu patineta",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/tupatineta.jpeg",
-                    "url": "https://shop.zeendr.com/tupatineta"
-                }
-            ]
-        },
-        "moda": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-moda.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-moda-cel.webp",
-            "stores": [
-                {
-                    "name": "admclothess",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_adm.png",
-                    "url": "https://shop.zeendr.com/adm"
-                },
-                {
-                    "name": "Bianco di Sole",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bianco%20di%20Sole.png",
-                    "url": "https://shop.zeendr.com/biancodisole"
-                },
-                {
-                    "name": "APC",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-12.png",
-                    "url": "https://shop.zeendr.com/apc"
-                },
-                {
-                    "name": "CocobyCamilag",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Coco%20by%20Camila.png",
-                    "url": "https://shop.zeendr.com/coco"
-                },
-                {
-                    "name": "Urban Style",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Urban%20style.png",
-                    "url": "https://shop.zeendr.com/urbanstyle"
+                    "name": "ISMO",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_ISMO.png",
+                    "url": "https://shop.irrelevant-club.com/ismo"
                 },
                 {
                     "name": "iv Tote bags",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_IVBags.png",
-                    "url": "https://shop.zeendr.com/ivbags"
+                    "url": "https://shop.irrelevant-club.com/ivbags"
                 },
                 {
-                    "name": "Essencial",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Essencial.png",
-                    "url": "https://shop.zeendr.com/essencial"
+                    "name": "Joyeria Madrid",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Joyeria%20Madrid.png",
+                    "url": "https://shop.irrelevant-club.com/joyeriamadrid"
+                },
+                {
+                    "name": "Le Charm",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Le%20charm.png",
+                    "url": "https://shop.irrelevant-club.com/lecharm"
+                },
+                {
+                    "name": "LG Accesorios",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lg.png",
+                    "url": "https://shop.irrelevant-club.com/lg"
+                },
+                {
+                    "name": "Liveprint.dc",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Live%20print.png",
+                    "url": "https://shop.irrelevant-club.com/liveprint"
+                },
+                {
+                    "name": "Luganzo Accesorios",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Luganzo%20accesorios.png",
+                    "url": "https://shop.irrelevant-club.com/luganzo"
+                },
+                {
+                    "name": "Mowa Accesorios",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mowa.png",
+                    "url": "https://shop.irrelevant-club.com/mowa"
+                },
+                {
+                    "name": "Om Shanti",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Om%20shanti.png",
+                    "url": "https://shop.irrelevant-club.com/omshanti"
+                },
+                {
+                    "name": "Renesme",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Renesme.png",
+                    "url": "https://shop.irrelevant-club.com/renesme"
+                },
+                {
+                    "name": "Sue\u00f1os de Cristal",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Sue%C3%B1os%20de%20cristal.png",
+                    "url": "https://shop.irrelevant-club.com/suenosdecristal"
                 },
                 {
                     "name": "UNIQUE",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Unique.png",
-                    "url": "https://shop.zeendr.com/unique"
+                    "url": "https://shop.irrelevant-club.com/unique"
                 },
                 {
-                    "name": "DNGL streetwear",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_DNGL.png",
-                    "url": "https://shop.zeendr.com/dngl"
+                    "name": "Urban Style",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Urban%20style.png",
+                    "url": "https://shop.irrelevant-club.com/urbanstyle"
                 },
                 {
-                    "name": "Amarilla gafas",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Amarilla.png",
-                    "url": "https://shop.zeendr.com/gafasamarillas"
-                },
-                {
-                    "name": "Drivezeniths",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Drivezeniths.png",
-                    "url": "https://shop.zeendr.com/drivezeniths"
-                },
-                {
-                    "name": "Gold Generation",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Gold%20generation.png",
-                    "url": "https://shop.zeendr.com/goldgeneration"
-                },
-                {
-                    "name": "Jhancleer",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Jhancleer.png",
-                    "url": "https://shop.zeendr.com/jhancleer"
-                },
-                {
-                    "name": "melimiel lingerie",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_melimiel.png",
-                    "url": "https://shop.zeendr.com/melimiel"
+                    "name": "Valumar",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_ValuMar.png",
+                    "url": "https://shop.irrelevant-club.com/valumar"
                 },
                 {
                     "name": "VAMBAS",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_VMB.png",
-                    "url": "https://shop.zeendr.com/vambas"
+                    "url": "https://shop.irrelevant-club.com/vambas"
+                },
+                {
+                    "name": "Willow boutique",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Willow.png",
+                    "url": "https://shop.irrelevant-club.com/willow"
+                },
+                {
+                    "name": "Zadquiel",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Buho-.png",
+                    "url": "https://shop.irrelevant-club.com/zadquiel"
+                }
+            ]
+        },
+        "cuidado": {
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "stores": [
+                {
+                    "name": "Botanika candles",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Botanika.png",
+                    "url": "https://shop.irrelevant-club.com/botanika"
+                },
+                {
+                    "name": "By Mar\u00eda Camila",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_By%20Maria%20Camila.png",
+                    "url": "https://shop.irrelevant-club.com/bymariacamila"
+                },
+                {
+                    "name": "Cami Giraldo Beauty",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_By%20Maria%20Camila.png",
+                    "url": "https://shop.irrelevant-club.com/camigiraldobeauty"
+                },
+                {
+                    "name": "Inefable by MJM",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Inefable.png",
+                    "url": "https://shop.irrelevant-club.com/inefable"
+                },
+                {
+                    "name": "SOLIS",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Solis.png",
+                    "url": "https://shop.irrelevant-club.com/solis"
+                },
+                {
+                    "name": "Vital Wellness",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Vital%20wellness%20market.png",
+                    "url": "https://shop.irrelevant-club.com/vital"
+                }
+            ]
+        },
+        "hobbies": {
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "stores": [
+                {
+                    "name": "Benjam\u00edn bot\u00f3n",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-14.png",
+                    "url": "https://shop.irrelevant-club.com/benjaminboton"
+                },
+                {
+                    "name": "Biobosques",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bio%20boques.png",
+                    "url": "https://shop.irrelevant-club.com/biobosques"
+                },
+                {
+                    "name": "Ceres velas",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ceres.png",
+                    "url": "https://shop.irrelevant-club.com/ceres"
+                },
+                {
+                    "name": "Aluva Collection",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Aluva%20collection.png",
+                    "url": "https://shop.irrelevant-club.com/aluva"
+                },
+                {
+                    "name": "Colposter",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Colposter.png",
+                    "url": "https://shop.irrelevant-club.com/colposter"
+                },
+                {
+                    "name": "Cuarzo Lim\u00f3n",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Cuarzo%20lim%C3%B3n.png",
+                    "url": "https://shop.irrelevant-club.com/cuarzolimon"
+                },
+                {
+                    "name": "Driada store",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Driada%20stores.png",
+                    "url": "https://shop.irrelevant-club.com/driada"
+                },
+                {
+                    "name": "La Calaca",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20Calaca.png",
+                    "url": "https://shop.irrelevant-club.com/lacalaca"
+                },
+                {
+                    "name": "Mirage de L' amour",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mirage%20dl%20amour.png",
+                    "url": "https://shop.irrelevant-club.com/miragedelamour"
+                },
+                {
+                    "name": "My Card",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_My%20card.png",
+                    "url": "https://shop.irrelevant-club.com/mycard"
+                },
+                {
+                    "name": "Plan del alma",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Plan%20Alma.png",
+                    "url": "https://shop.irrelevant-club.com/plandelalma"
+                },
+                {
+                    "name": "Tu patineta",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/TARJETA%20MARCA_Tu%20patineta.png",
+                    "url": "https://shop.irrelevant-club.com/tupatineta"
+                },
+                {
+                    "name": "Frido",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Frido.png",
+                    "url": "https://shop.irrelevant-club.com/frido"
+                }
+            ]
+        },
+        "moda": {
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "stores": [
+                {
+                    "name": "APC",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Apc-12.png",
+                    "url": "https://shop.irrelevant-club.com/apc"
+                },
+                {
+                    "name": "CocobyCamilag",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Coco%20by%20Camila.png",
+                    "url": "https://shop.irrelevant-club.com/coco"
+                },
+                {
+                    "name": "DNGL streetwear",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_DNGL.png",
+                    "url": "https://shop.irrelevant-club.com/dngl"
+                },
+                {
+                    "name": "Drivezeniths",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Drivezeniths.png",
+                    "url": "https://shop.irrelevant-club.com/drivezeniths"
+                },
+                {
+                    "name": "Bianco di Sole",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bianco%20di%20Sole.png",
+                    "url": "https://shop.irrelevant-club.com/biancodisole"
+                },
+                {
+                    "name": "Gold Generation",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Gold%20generation.png",
+                    "url": "https://shop.irrelevant-club.com/goldgeneration"
+                },
+                {
+                    "name": "Jhancleer",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Jhancleer.png",
+                    "url": "https://shop.irrelevant-club.com/jhancleer"
+                },
+                {
+                    "name": "melimiel lingerie",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_melimiel.png",
+                    "url": "https://shop.irrelevant-club.com/melimiel"
                 },
                 {
                     "name": "Rich clothing",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Rich%20clothing.png",
-                    "url": "https://shop.zeendr.com/richclothing"
+                    "url": "https://shop.irrelevant-club.com/richclothing"
                 },
                 {
                     "name": "Shopping hunters",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Shopping%20hunters.png",
-                    "url": "https://shop.zeendr.com/shoppinghunters"
+                    "url": "https://shop.irrelevant-club.com/shoppinghunters"
                 }
             ]
         },
         "postres": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-dulce.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-dulce-cel.webp",
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
             "stores": [
                 {
                     "name": "Alandetty Bakety",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ab.png",
-                    "url": "https://shop.zeendr.com/alandetty"
-                },
-                {
-                    "name": "Lucca",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
-                    "url": "https://shop.zeendr.com/lucca"
+                    "url": "https://shop.irrelevant-club.com/alandetty"
                 },
                 {
                     "name": "BAKEAT",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bakeat.png",
-                    "url": "https://shop.zeendr.com/bakeat"
-                },
-                {
-                    "name": "Blaudulce",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Blau%20dulce.png",
-                    "url": "https://shop.zeendr.com/blaudulce"
-                },
-                {
-                    "name": "Caf\u00e9 Lucila",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Caf%C3%A9%20Lucila.png",
-                    "url": "https://shop.zeendr.com/cafelucila"
-                },
-                {
-                    "name": "Cal\u00e7ot",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Calcot.png",
-                    "url": "https://shop.zeendr.com/calcot"
-                },
-                {
-                    "name": "Chilitoparchadito",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Chilito%20parchadito.png",
-                    "url": "https://shop.zeendr.com/chilioparchadito"
-                },
-                {
-                    "name": "Dulces t\u00edpicos D\u2019isa",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO-21.png",
-                    "url": "https://shop.zeendr.com/disa"
-                },
-                {
-                    "name": "Dulzuras Canaan",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Dulzuras%20canaan.png",
-                    "url": "https://shop.zeendr.com/dulzurascanaan"
-                },
-                {
-                    "name": "Feroz",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Feroz.png",
-                    "url": "https://shop.zeendr.com/feroz"
-                },
-                {
-                    "name": "JIMOCHI",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Jimochi.png",
-                    "url": "https://shop.zeendr.com/jimochi"
-                },
-                {
-                    "name": "Joy Bakery",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Joy%20baker.png",
-                    "url": "https://shop.zeendr.com/joy"
-                },
-                {
-                    "name": "La cocina de clemen y saris",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20Cocina%20de%20Clemen%20y%20Saris.png",
-                    "url": "https://shop.zeendr.com/clemenysaris"
-                },
-                {
-                    "name": "La taza azul caf\u00e9",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20taza%20azul.png",
-                    "url": "https://shop.zeendr.com/tazaazul"
-                },
-                {
-                    "name": "Lela Chocolate",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_El%20arte%20hecho%20chocolate.png",
-                    "url": "https://shop.zeendr.com/lelachocolates"
-                },
-                {
-                    "name": "Lush & blossom cakeshop",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lush%20Blossom.png",
-                    "url": "https://shop.zeendr.com/lushblossom"
-                },
-                {
-                    "name": "Monbrand",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Monbrand.png",
-                    "url": "https://shop.zeendr.com/monbrand"
-                },
-                {
-                    "name": "Qdulce candystore",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_QDulce.png",
-                    "url": "https://shop.zeendr.com/qdulce"
-                },
-                {
-                    "name": "Ruma's",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Rumas.png",
-                    "url": "https://shop.zeendr.com/rumas"
-                },
-                {
-                    "name": "Solo para m\u00ed, reposter\u00eda artesanal",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Solo%20para%20mi.png",
-                    "url": "https://shop.zeendr.com/soloparami"
-                }
-            ]
-        },
-        "salado": {
-            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-salados.webp",
-            "banner-movil": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner-salados-cel.webp",
-            "stores": [
-                {
-                    "name": "Arepas triple queso Las Rellenitas",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Las%20rellenitas.png",
-                    "url": "https://shop.zeendr.com/rellenitas"
-                },
-                {
-                    "name": "Bacanal",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bacanal.png",
-                    "url": "https://shop.zeendr.com/bacanal"
-                },
-                {
-                    "name": "Balsamica",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bals%C3%A1mica.png",
-                    "url": "https://shop.zeendr.com/"
-                },
-                {
-                    "name": "CIAO",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ciao.png",
-                    "url": "https://shop.zeendr.com/ciao"
+                    "url": "https://shop.irrelevant-club.com/bakeat"
                 },
                 {
                     "name": "Lucca",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
-                    "url": "https://shop.zeendr.com/lucca"
+                    "url": "https://shop.irrelevant-club.com/lucca"
                 },
                 {
-                    "name": "Diptacho",
-                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Dip%20tacho.png",
-                    "url": "https://shop.zeendr.com/diptacho"
+                    "name": "Blaudulce",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Blau%20dulce.png",
+                    "url": "https://shop.irrelevant-club.com/blaudulce"
+                },
+                {
+                    "name": "Caf\u00e9 Lucila",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Caf%C3%A9%20Lucila.png",
+                    "url": "https://shop.irrelevant-club.com/cafelucila"
+                },
+                {
+                    "name": "Cal\u00e7ot",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Calcot.png",
+                    "url": "https://shop.irrelevant-club.com/calcot"
+                },
+                {
+                    "name": "Chilitoparchadito",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Chilito%20parchadito.png",
+                    "url": "https://shop.irrelevant-club.com/chilioparchadito"
+                },
+                {
+                    "name": "Dulces t\u00edpicos D\u2019isa",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO-21.png",
+                    "url": "https://shop.irrelevant-club.com/disa"
+                },
+                {
+                    "name": "Dulzuras Canaan",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Dulzuras%20canaan.png",
+                    "url": "https://shop.irrelevant-club.com/dulzurascanaan"
+                },
+                {
+                    "name": "Feroz",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Feroz.png",
+                    "url": "https://shop.irrelevant-club.com/feroz"
+                },
+                {
+                    "name": "JIMOCHI",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Jimochi.png",
+                    "url": "https://shop.irrelevant-club.com/jimochi"
+                },
+                {
+                    "name": "Joy Bakery",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Joy%20baker.png",
+                    "url": "https://shop.irrelevant-club.com/joy"
+                },
+                {
+                    "name": "La cocina de clemen y saris",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20Cocina%20de%20Clemen%20y%20Saris.png",
+                    "url": "https://shop.irrelevant-club.com/lacocinadeclemenysaris"
+                },
+                {
+                    "name": "La taza azul caf\u00e9",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20taza%20azul.png",
+                    "url": "https://shop.irrelevant-club.com/tazaazul"
+                },
+                {
+                    "name": "Lela Chocolate",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Dulzuras%20canaan.png",
+                    "url": "https://shop.irrelevant-club.com/lelachocolates"
+                },
+                {
+                    "name": "Lush & blossom cakeshop",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lush%20Blossom.png",
+                    "url": "https://shop.irrelevant-club.com/lushblossom"
+                },
+                {
+                    "name": "Monbrand",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Mirage%20dl%20amour.png",
+                    "url": "https://shop.irrelevant-club.com/monbrand"
+                },
+                {
+                    "name": "Qdulce candystore",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_QDulce.png",
+                    "url": "https://shop.irrelevant-club.com/qdulce"
+                },
+                {
+                    "name": "Ruma's",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Rumas.png",
+                    "url": "https://shop.irrelevant-club.com/rumas"
+                },
+                {
+                    "name": "Antojitos la Mona",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/TARJETA%20MARCA_Antojitos%20la%20mona.png",
+                    "url": "https://shop.irrelevant-club.com/antojitoslamona"
+                },
+                {
+                    "name": "Nana Bakes",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/Nana%20bakes_Nana%20Bakes.png",
+                    "url": "https://shop.irrelevant-club.com/nanabakes"
+                },
+                {
+                    "name": "Solo para mi",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Solo%20para%20mi.png",
+                    "url": "https://shop.irrelevant-club.com/soloparami"
+                }
+            ]
+        },
+        "salado": {
+            "banner": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/banner2irr.png",
+            "stores": [
+                {
+                    "name": "Arepas triple queso Las Rellenitas",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/TUTORES/72LASRELLENITASTRIPLEQUESO/LOGO%20LAS%20RELLENITAS.png",
+                    "url": "https://shop.irrelevant-club.com/rellenitas"
+                },
+                {
+                    "name": "Lucca",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Lucca.png",
+                    "url": "https://shop.irrelevant-club.com/lucca"
+                },
+                {
+                    "name": "Bacanal",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Bacanal.png",
+                    "url": "https://shop.irrelevant-club.com/bacanal"
+                },
+                {
+                    "name": "CIAO",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Ciao.png",
+                    "url": "https://shop.irrelevant-club.com/ciao"
+                },
+                {
+                    "name": "Delicias del campo",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/TUTORES/Delicias%20del%20campo.jpeg",
+                    "url": "https://shop.irrelevant-club.com/deliciasdelcampo"
                 },
                 {
                     "name": "Empanadas 7x4000",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Empanadas%20x%200.png",
-                    "url": "https://shop.zeendr.com/empanadasomiedo"
+                    "url": "https://shop.irrelevant-club.com/empanadasomiedo"
+                },
+                {
+                    "name": "Eventos al instante",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Eventos%20al%20instante.png",
+                    "url": "https://shop.irrelevant-club.com/eventosalinstante"
                 },
                 {
                     "name": "Kebstaco",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_KEBSTACO.png",
-                    "url": "https://shop.zeendr.com/kebstaco"
+                    "url": "https://shop.irrelevant-club.com/kebstaco"
                 },
                 {
                     "name": "La furia - Comida callejera argentina",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_La%20furia.png",
-                    "url": "https://shop.zeendr.com/lafuria"
+                    "url": "https://shop.irrelevant-club.com/lafuria"
                 },
                 {
                     "name": "Matata burger food",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Matata.png",
-                    "url": "https://shop.zeendr.com/matata"
+                    "url": "https://shop.irrelevant-club.com/matata"
                 },
                 {
                     "name": "Pedacito de cielo",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Pedacito%20cielo.png",
-                    "url": "https://shop.zeendr.com/pedacitodecielo"
+                    "url": "https://shop.irrelevant-club.com/pedacitodecielo"
                 },
                 {
                     "name": "Quinta Caribe",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Quinta%20Caribe.png",
-                    "url": "https://shop.zeendr.com/quintacaribe"
+                    "url": "https://shop.irrelevant-club.com/quintacaribe"
                 },
                 {
                     "name": "Treccia",
                     "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/LOGO%20ARTESANO_Treccia.png",
-                    "url": "https://shop.zeendr.com/treccia"
+                    "url": "https://shop.irrelevant-club.com/treccia"
+                },
+                {
+                    "name": "Pig Snacks",
+                    "image": "https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Logos-Feria/TARJETA%20MARCA_Pig%20snacks.png",
+                    "url": "https://shop.irrelevant-club.com/pigsnacks"
                 }
             ]
         }
