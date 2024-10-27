@@ -21,7 +21,6 @@ function HomePage() {
   const mobileBanners = [
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp?v=1',
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/video-dragon.mp4'
   ];
 
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
