@@ -48,7 +48,7 @@ function HomePage() {
   const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp?v=1';
   const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp?v=1';
   const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp?v=1';
-  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-dulces.webp?v=1';
+  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Categoria%20nueva_Reposteria.webp';
   const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp?v=1';
   const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp?v=1';
 

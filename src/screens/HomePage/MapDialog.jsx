@@ -9,27 +9,23 @@ function MapDialog({ open, onClose }) {
 
   useEffect(() => {
     const handleOrientationChange = () => {
-      // Detecta si la pantalla está en modo horizontal
       if (window.innerWidth > window.innerHeight) {
-        setShowRotateHint(false); // Oculta el mensaje cuando la pantalla está en modo horizontal
+        setShowRotateHint(false);
       } else {
-        setShowRotateHint(true); // Muestra el mensaje cuando la pantalla está en modo vertical
+        setShowRotateHint(true);
       }
     };
 
     if (open && isMobile) {
-      // Añade el event listener al abrir el diálogo en un dispositivo móvil
       window.addEventListener('resize', handleOrientationChange);
-      handleOrientationChange(); // Verifica la orientación inicial
+      handleOrientationChange();
     }
 
     return () => {
-      // Limpia el event listener al cerrar el diálogo
       window.removeEventListener('resize', handleOrientationChange);
     };
   }, [open, isMobile]);
 
-  // Maneja el clic para ocultar la pista de rotación y mostrar el mapa
   const handleClickToShowMap = () => {
     setShowRotateHint(false);
   };
@@ -43,10 +39,16 @@ function MapDialog({ open, onClose }) {
           position: 'absolute',
           right: 8,
           top: 8,
-          color: (theme) => theme.palette.grey[500],
+          color: 'white', // Color blanco para mejor visibilidad
+          bgcolor: 'rgba(0, 0, 0, 0.5)', // Fondo semi-transparente para contraste
+          '&:hover': {
+            bgcolor: 'rgba(0, 0, 0, 0.7)', // Acentuar el fondo en hover
+          },
+          zIndex: 11, // Asegurar que esté al frente
+          fontSize: '1.5rem' // Tamaño del icono
         }}
       >
-        <CloseIcon />
+        <CloseIcon fontSize="inherit" />
       </IconButton>
 
       {isMobile && showRotateHint && (
@@ -65,13 +67,13 @@ function MapDialog({ open, onClose }) {
             zIndex: 10,
             color: 'black',
           }}
-          onClick={handleClickToShowMap} // Manejador de clic
+          onClick={handleClickToShowMap}
         >
           <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>
             Gira tu pantalla para ver el mapa
           </Typography>
           <img
-            src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/phone-rotate-unscreen.gif"
+            src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Feria%20mapa-01-Ready.webp"
             alt="Rotate hint"
             style={{ width: '80px', height: 'auto' }}
           />
