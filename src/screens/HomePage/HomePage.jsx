@@ -24,29 +24,24 @@ function HomePage() {
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1'
   ];
 
-  // Estado para controlar el índice del banner actual
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
 
-  // Cambiar banner cada 10 segundos
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % desktopBanners.length);
-    }, 5000); // Cambia cada 10 segundos
-    return () => clearInterval(interval); // Limpia el intervalo cuando se desmonta el componente
+    }, 5000);
+    return () => clearInterval(interval);
   }, [desktopBanners.length]);
 
-  // Maneja el banner a mostrar según el tamaño de la pantalla
   const currentBanner = isMobile ? mobileBanners[currentBannerIndex] : desktopBanners[currentBannerIndex];
 
   const handleCategoryClick = (category) => {
-    navigate(`/categoria/${category}`); // Redirige a la categoría correspondiente
+    navigate(`/categoria/${category}`);
   };
 
-  // Funciones para manejar la apertura y cierre de MapDialog
   const openMapDialog = () => setIsMapDialogOpen(true);
   const closeMapDialog = () => setIsMapDialogOpen(false);
 
-  // Imágenes de categorías con cache busting
   const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp?v=1';
   const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp?v=1';
   const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp?v=1';
@@ -57,17 +52,21 @@ function HomePage() {
   const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Banner%20mapa%20nuevo%20wepb_Mesa%20de%20trabajo%201.webp?v=1';
   const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png?v=1';
 
+  // Banners adicionales según el tamaño de pantalla
+  const desktopInfoBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/SECCION%20INFORMATIVA%20PC-01-01.webp';
+  const mobileInfoBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Seccion%20informativa%20cel-01-01.webp';
+
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>
       {/* Banner principal superior con cambio automático */}
       <Box sx={{ mb: 4 }}>
         <img 
-          src={currentBanner} // Cambia el banner dinámicamente cada 10 segundos
+          src={currentBanner} 
           alt="Banner Tutores" 
           style={{ 
             width: '100%', 
             height: 'auto',
-            borderRadius: '8px', // Para dar bordes redondeados si lo deseas
+            borderRadius: '8px',
           }}
         />
       </Box>
@@ -94,12 +93,12 @@ function HomePage() {
                   borderRadius: '8px', 
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
                   '&:hover': {
-                    transform: 'scale(1.05)', // Aumenta ligeramente el tamaño
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)', // Añade una sombra
+                    transform: 'scale(1.05)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
                   },
-                  cursor: 'pointer' // Cambiamos el cursor a pointer
+                  cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('accesorios')} // Redirige a la categoría accesorios
+                onClick={() => handleCategoryClick('accesorios')}
               >
                 <img 
                   src={accesorios}
@@ -122,7 +121,7 @@ function HomePage() {
                   },
                   cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('cuidado')} // Redirige a la categoría cuidado
+                onClick={() => handleCategoryClick('cuidado')}
               >
                 <img 
                   src={cuidado} 
@@ -145,7 +144,7 @@ function HomePage() {
                   },
                   cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('moda')} // Redirige a la categoría moda
+                onClick={() => handleCategoryClick('moda')}
               >
                 <img 
                   src={moda}
@@ -168,7 +167,7 @@ function HomePage() {
                   },
                   cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('postres')} // Redirige a la categoría postres
+                onClick={() => handleCategoryClick('postres')}
               >
                 <img 
                   src={postres} 
@@ -191,7 +190,7 @@ function HomePage() {
                   },
                   cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('salado')} // Redirige a la categoría salado
+                onClick={() => handleCategoryClick('salado')}
               >
                 <img 
                   src={salado} 
@@ -214,7 +213,7 @@ function HomePage() {
                   },
                   cursor: 'pointer'
                 }}
-                onClick={() => handleCategoryClick('hobbies')} // Redirige a la categoría hobbies
+                onClick={() => handleCategoryClick('hobbies')}
               >
                 <img 
                   src={hobbies} 
@@ -237,7 +236,7 @@ function HomePage() {
             <Button 
               variant="contained" 
               color="primary" 
-              onClick={openMapDialog} // Abre el diálogo del mapa al hacer clic
+              onClick={openMapDialog}
               sx={{
                 textTransform: 'none',
                 position: 'absolute',
@@ -254,18 +253,17 @@ function HomePage() {
             >
               Descubre el mapa de la feria
             </Button>
-            {/* Ícono de mouse posicionado en la parte inferior derecha del botón */}
             <Box 
               component="img" 
               src={mouseIcon} 
               alt="Ícono del mouse" 
               sx={{
                 position: 'absolute',
-                bottom: '32px', // Ajustamos la posición del ícono cerca del botón
-                right: '45px', // Movemos el ícono a la esquina inferior derecha
+                bottom: '32px',
+                right: '45px',
                 height: '40px',
                 width: '40px',
-                animation: 'bounce 2s infinite', // Añadimos la animación de rebote
+                animation: 'bounce 2s infinite',
               }}
             />
           </Box>
@@ -275,7 +273,19 @@ function HomePage() {
       {/* Renderizamos MapDialog con propiedades de apertura y cierre */}
       <MapDialog open={isMapDialogOpen} onClose={closeMapDialog} />
 
-      {/* Estilo para la animación de rebote */}
+      {/* Nueva sección de banner al final */}
+      <Box sx={{ mt: 4, mb: 4, textAlign: 'center' }}>
+        <img 
+          src={isMobile ? mobileInfoBanner : desktopInfoBanner}
+          alt="Sección Informativa"
+          style={{
+            width: '100%',
+            height: 'auto',
+            borderRadius: '8px',
+          }}
+        />
+      </Box>
+
       <style>
         {
           `@keyframes bounce {
