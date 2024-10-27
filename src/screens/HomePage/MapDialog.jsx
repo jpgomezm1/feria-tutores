@@ -9,7 +9,7 @@ function MapDialog({ open, onClose }) {
 
   useEffect(() => {
     const handleOrientationChange = () => {
-      // Detecta si la pantalla está en modo paisaje
+      // Detecta si la pantalla está en modo horizontal
       if (window.innerWidth > window.innerHeight) {
         setShowRotateHint(false); // Oculta el mensaje cuando la pantalla está en modo horizontal
       } else {
@@ -28,6 +28,11 @@ function MapDialog({ open, onClose }) {
       window.removeEventListener('resize', handleOrientationChange);
     };
   }, [open, isMobile]);
+
+  // Maneja el clic para ocultar la pista de rotación y mostrar el mapa
+  const handleClickToShowMap = () => {
+    setShowRotateHint(false);
+  };
 
   return (
     <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
@@ -60,6 +65,7 @@ function MapDialog({ open, onClose }) {
             zIndex: 10,
             color: 'black',
           }}
+          onClick={handleClickToShowMap} // Manejador de clic
         >
           <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>
             Gira tu pantalla para ver el mapa
@@ -69,6 +75,9 @@ function MapDialog({ open, onClose }) {
             alt="Rotate hint"
             style={{ width: '80px', height: 'auto' }}
           />
+          <Typography variant="body2" sx={{ mt: 2 }}>
+            O toca aquí para verlo en pequeño
+          </Typography>
         </Box>
       )}
 
