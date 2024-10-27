@@ -3,7 +3,7 @@ import { Dialog, DialogContent, IconButton, Box, Typography, useMediaQuery } fro
 import CloseIcon from '@mui/icons-material/Close';
 
 function MapDialog({ open, onClose }) {
-  const mapUrl = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Feria%20mapa%20ready.svg';
+  const mapUrl = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Feria%20mapa.svg';
   const isMobile = useMediaQuery('(max-width:600px)');
   const [showRotateHint, setShowRotateHint] = useState(true);
 

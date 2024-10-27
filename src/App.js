@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3000); // Cambiado a 4000 ms para mostrar el loader durante 4 segundos
 
     return () => clearTimeout(timer);
   }, []);

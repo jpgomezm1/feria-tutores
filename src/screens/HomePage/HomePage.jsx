@@ -11,29 +11,33 @@ function HomePage() {
   // Estado para controlar la visibilidad de MapDialog
   const [isMapDialogOpen, setIsMapDialogOpen] = useState(false);
 
-  // Imágenes de banners para rotar (agregamos un parámetro de cache busting)
+  // Imágenes de banners para rotar (sin el video en desktop)
   const desktopBanners = [
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-pc2.webp?v=1',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1',
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1'
   ];
 
+  // Imágenes de banners para móvil (incluye el video)
   const mobileBanners = [
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp?v=1',
     'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1'
+    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/video-dragon.mp4'
   ];
 
   const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
 
+  // Configurar el cambio de banners
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % desktopBanners.length);
+      const banners = isMobile ? mobileBanners : desktopBanners;
+      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, [desktopBanners.length]);
+  }, [isMobile, desktopBanners.length, mobileBanners.length]);
 
+  // Determinar el banner actual y si es video
   const currentBanner = isMobile ? mobileBanners[currentBannerIndex] : desktopBanners[currentBannerIndex];
+  const isVideo = currentBanner.endsWith('.mp4');
 
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`);
@@ -60,15 +64,29 @@ function HomePage() {
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>
       {/* Banner principal superior con cambio automático */}
       <Box sx={{ mb: 4 }}>
-        <img 
-          src={currentBanner} 
-          alt="Banner Tutores" 
-          style={{ 
-            width: '100%', 
-            height: 'auto',
-            borderRadius: '8px',
-          }}
-        />
+        {isVideo ? (
+          <video
+            src={currentBanner}
+            autoPlay
+            muted
+            loop
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '8px',
+            }}
+          />
+        ) : (
+          <img
+            src={currentBanner}
+            alt="Banner Tutores"
+            style={{
+              width: '100%',
+              height: 'auto',
+              borderRadius: '8px',
+            }}
+          />
+        )}
       </Box>
 
       {/* Sección principal con categorías y banner único */}
