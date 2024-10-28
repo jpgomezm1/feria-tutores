@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Grid, Box, Button, useMediaQuery, useTheme } from '@mui/material';
+import { Container, Grid, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import MapDialog from './MapDialog'; // Importamos el componente MapDialog
+import MapDialog from './MapDialog';
 
 function HomePage() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // Detección de dispositivo móvil simplificada
+  const isMobile = window.innerWidth <= 600;
   const navigate = useNavigate();
 
   // Estado para controlar la visibilidad de MapDialog
@@ -43,6 +43,7 @@ function HomePage() {
         <img
           src={isMobile ? mobileBanner : desktopBanner}
           alt="Banner Tutores"
+          loading="lazy" // Carga diferida
           style={{
             width: '100%',
             height: 'auto',
@@ -60,12 +61,13 @@ function HomePage() {
             <img 
               src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/CATEGORIAS%20TEXTO-07.png?v=1"
               alt="Categorías"
+              loading="lazy" // Carga diferida
               style={{ width: '37%', height: 'auto' }}
             />
           </Box>
 
           <Grid container spacing={2}>
-            {/* Tarjeta de Accesorios */}
+            {/* Tarjetas de categorías con carga diferida */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -78,12 +80,12 @@ function HomePage() {
                 <img 
                   src={accesorios}
                   alt="Accesorios"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
             </Grid>
 
-            {/* Tarjeta de Cuidado */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -96,12 +98,12 @@ function HomePage() {
                 <img 
                   src={cuidado} 
                   alt="Cuidado"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
             </Grid>
 
-            {/* Tarjeta de Moda */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -114,12 +116,12 @@ function HomePage() {
                 <img 
                   src={moda}
                   alt="Moda"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
             </Grid>
 
-            {/* Tarjeta de Postres */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -132,12 +134,12 @@ function HomePage() {
                 <img 
                   src={postres} 
                   alt="Postres"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
             </Grid>
 
-            {/* Tarjeta de Salado */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -150,12 +152,12 @@ function HomePage() {
                 <img 
                   src={salado} 
                   alt="Salado"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
             </Grid>
 
-            {/* Tarjeta de Hobbies */}
             <Grid item xs={6} sm={4}>
               <Box 
                 sx={{
@@ -168,6 +170,7 @@ function HomePage() {
                 <img 
                   src={hobbies} 
                   alt="Hobbies"
+                  loading="lazy"
                   style={{ width: '100%', borderRadius: '8px' }}
                 />
               </Box>
@@ -181,6 +184,7 @@ function HomePage() {
             <img 
               src={mapa2}
               alt="Mapa de la feria"
+              loading="lazy"
               style={{ width: '100%', borderRadius: '8px' }}
             />
             <Button 
@@ -207,6 +211,7 @@ function HomePage() {
               component="img" 
               src={mouseIcon} 
               alt="Ícono del mouse" 
+              loading="lazy"
               sx={{
                 position: 'absolute',
                 bottom: '32px',
@@ -227,6 +232,7 @@ function HomePage() {
         <img 
           src={isMobile ? mobileInfoBanner : desktopInfoBanner}
           alt="Sección Informativa"
+          loading="lazy"
           style={{
             width: '100%',
             height: 'auto',
