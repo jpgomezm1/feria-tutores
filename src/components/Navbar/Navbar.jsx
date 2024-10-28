@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Grid, Box, Container, useMediaQuery, useTheme } from '@mui/material';
+import { Home, Map } from '@mui/icons-material'; // Importamos los iconos de MUI
 import { useNavigate } from 'react-router-dom';
 import MapDialog from '../../screens/HomePage/MapDialog';
 
@@ -8,19 +9,16 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const navigate = useNavigate();
 
-  const [isMapDialogOpen, setIsMapDialogOpen] = useState(false); // Estado para controlar el diálogo
+  const [isMapDialogOpen, setIsMapDialogOpen] = useState(false);
 
-  // Función para redirigir a HomePage cuando se haga clic en el ícono de la casita
   const handleHomeClick = () => {
-    navigate('/'); // Redirige a la ruta principal (HomePage)
+    navigate('/');
   };
 
-  // Función para abrir el diálogo del mapa
   const handleMapClick = () => {
     setIsMapDialogOpen(true);
   };
 
-  // Función para cerrar el diálogo del mapa
   const handleCloseMapDialog = () => {
     setIsMapDialogOpen(false);
   };
@@ -52,36 +50,28 @@ function Navbar() {
                   <IconButton
                     size="large"
                     edge="start"
-                    color="inherit"
                     aria-label="home"
                     onClick={handleHomeClick}
                     sx={{
+                      color: '#1A1F71', // Color personalizado
                       '&:hover': { backgroundColor: 'transparent', transform: 'scale(1.1)' },
                       transition: 'transform 0.3s ease, color 0.3s ease',
                     }}
                   >
-                    <img 
-                      src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/home-unscreen.gif" 
-                      alt="Home Icon" 
-                      style={{ width: '40px', height: '40px' }} 
-                    />
+                    <Home />
                   </IconButton>
                   <IconButton
                     size="large"
                     edge="start"
-                    color="inherit"
                     aria-label="map"
                     onClick={handleMapClick}
                     sx={{
+                      color: '#1A1F71', // Color personalizado
                       '&:hover': { backgroundColor: 'transparent', transform: 'scale(1.1)' },
                       transition: 'transform 0.3s ease, color 0.3s ease',
                     }}
                   >
-                    <img 
-                      src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/maps-unscreen.gif" 
-                      alt="Map Icon" 
-                      style={{ width: '40px', height: '40px' }} 
-                    />
+                    <Map />
                   </IconButton>
                 </Box>
               </Grid>
@@ -122,36 +112,28 @@ function Navbar() {
                     <IconButton
                       size="large"
                       edge="start"
-                      color="inherit"
                       aria-label="home"
                       onClick={handleHomeClick}
                       sx={{
+                        color: '#1A1F71', // Color personalizado
                         '&:hover': { backgroundColor: 'transparent', transform: 'scale(1.1)' },
                         transition: 'transform 0.3s ease, color 0.3s ease',
                       }}
                     >
-                      <img 
-                        src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/home-unscreen.gif" 
-                        alt="Home Icon" 
-                        style={{ width: '40px', height: '40px' }} 
-                      />
+                      <Home />
                     </IconButton>
                     <IconButton
                       size="large"
                       edge="start"
-                      color="inherit"
                       aria-label="map"
                       onClick={handleMapClick}
                       sx={{
+                        color: '#1A1F71', // Color personalizado
                         '&:hover': { backgroundColor: 'transparent', transform: 'scale(1.1)' },
                         transition: 'transform 0.3s ease, color 0.3s ease',
                       }}
                     >
-                      <img 
-                        src="https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/maps-unscreen.gif" 
-                        alt="Map Icon" 
-                        style={{ width: '40px', height: '40px' }} 
-                      />
+                      <Map />
                     </IconButton>
                   </Box>
                 </Grid>
