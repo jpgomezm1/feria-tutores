@@ -3,7 +3,7 @@ import { Dialog, DialogContent, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 // Importa la imagen desde la carpeta 'assets'
-import feriaMapa from '../../assets/mapa-feria-final.svg';
+import feriaMapa from '../../assets/Mapa-ultimo.svg';
 
 function MapDialog({ open, onClose }) {
   return (
