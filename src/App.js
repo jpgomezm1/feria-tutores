@@ -9,10 +9,11 @@ import HomePage from './screens/HomePage/HomePage';
 import CategoryScreen from './screens/CategoryScreen/CategoryScreen';
 import Footer from './components/Footer/Footer';
 
+import Loader from './assets/loader.gif';
+
 function App() {
   // Mantener loading en true para que cargue inicialmente el Loader
   const [loading, setLoading] = useState(true);
-  const Loader = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/loader-irrelevant.gif?v=2';
 
   useEffect(() => {
     // `loading` se desactiva después de 3 segundos sin causar recargas repetitivas

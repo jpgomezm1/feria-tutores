@@ -3,6 +3,19 @@ import { Container, Grid, Box, Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import MapDialog from './MapDialog';
 
+import desktopBanner from '../../assets/principal-pc.webp';
+import mobileBanner from '../../assets/principal-celuar.webp';
+import accesorios from '../../assets/cat-accesorios.webp';
+import cuidado from '../../assets/cat-cuidado2.webp';
+import moda from '../../assets/cat-moda2.webp';
+import postres from '../../assets/Categoria nueva_Reposteria (1).webp';
+import salado from '../../assets/cat-salados2.webp';
+import hobbies from '../../assets/cat-hobbies2.webp';
+import mapa2 from '../../assets/banner-mapa.webp';
+import mouseIcon from '../../assets/icono-click (1).png';
+import desktopInfoBanner from '../../assets/SECCION INFORMATIVA PC-01-01 (1).webp';
+import mobileInfoBanner from '../../assets/Seccion informativa cel-01-01 (1).webp';
+
 function HomePage() {
   // Detección de dispositivo móvil simplificada
   const isMobile = window.innerWidth <= 600;
@@ -11,9 +24,6 @@ function HomePage() {
   // Estado para controlar la visibilidad de MapDialog
   const [isMapDialogOpen, setIsMapDialogOpen] = useState(false);
 
-  // Banner único para PC y móvil
-  const desktopBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1';
-  const mobileBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1';
 
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`);
@@ -22,19 +32,6 @@ function HomePage() {
   const openMapDialog = () => setIsMapDialogOpen(true);
   const closeMapDialog = () => setIsMapDialogOpen(false);
 
-  const accesorios = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-accesorios.webp?v=1';
-  const cuidado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-cuidado2.webp?v=1';
-  const moda = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-moda2.webp?v=1';
-  const postres = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Categoria%20nueva_Reposteria.webp';
-  const salado = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-salados2.webp?v=1';
-  const hobbies = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/cat-hobbies2.webp?v=1';
-
-  const mapa2 = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Banner%20mapa%20nuevo%20wepb_Mesa%20de%20trabajo%201.webp?v=1';
-  const mouseIcon = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/icono-click.png?v=1';
-
-  // Banners adicionales según el tamaño de pantalla
-  const desktopInfoBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/SECCION%20INFORMATIVA%20PC-01-01.webp';
-  const mobileInfoBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Seccion%20informativa%20cel-01-01.webp';
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>

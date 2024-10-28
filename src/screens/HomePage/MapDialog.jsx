@@ -2,6 +2,8 @@ import React from 'react';
 import { Dialog, DialogContent, IconButton, Box } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
+
+
 function MapDialog({ open, onClose }) {
   const mapUrl = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/Feria%20mapa.svg';
 
