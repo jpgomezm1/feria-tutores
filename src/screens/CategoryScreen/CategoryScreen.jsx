@@ -4,7 +4,6 @@ import { Search } from '@mui/icons-material';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSwipeable } from 'react-swipeable';
-import { motion } from 'framer-motion';
 import data from '../../data/categories.json';
 
 const categories = ['accesorios', 'cuidado', 'moda', 'postres', 'salado', 'hobbies'];
@@ -18,7 +17,7 @@ function CategoryScreen() {
   const [isShuffling, setIsShuffling] = useState(false);
   const [showScrollHint, setShowScrollHint] = useState(true);
   const navigate = useNavigate();
-  const isMobile = useMediaQuery('(max-width:600px)'); // Detecta si la pantalla es pequeña
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   const phrases = [
     "¡Aquí está lo que quieres...!",
@@ -120,21 +119,8 @@ function CategoryScreen() {
     store.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Configuración de animación
-  const transitionVariants = {
-    initial: { opacity: 0, y: 20, scale: 0.95 },
-    animate: { opacity: 1, y: 0, scale: 1 },
-    exit: { opacity: 0, y: -20, scale: 0.95 }
-  };
-
   return (
-    <motion.div
-      variants={transitionVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 0.6, ease: [0.4, 0.0, 0.2, 1] }}
-    >
+    <div>
       <Container
         maxWidth="lg"
         {...handlers}
@@ -175,13 +161,10 @@ function CategoryScreen() {
         )}
 
         <Box sx={{ mt: 6, mb: 4 }}>
-          <motion.img 
+          <img 
             src={isMobile ? categoryData['banner-movil'] : categoryData.banner} 
             alt={`${category} banner`} 
             style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
           />
         </Box>
 
@@ -209,51 +192,43 @@ function CategoryScreen() {
             }}
           />
 
-          <motion.div whileTap={{ rotate: 360 }}>
-            <IconButton onClick={shuffleStores} sx={{ ml: 2, color: 'white' }}>
-              <AutoFixHighIcon fontSize="large" />
-            </IconButton>
-          </motion.div>
+          <IconButton onClick={shuffleStores} sx={{ ml: 2, color: 'white' }}>
+            <AutoFixHighIcon fontSize="large" />
+          </IconButton>
         </Box>
 
         <Grid container spacing={4} sx={{ mb: 3 }}>
           {filteredStores.map((store, index) => (
             <Grid item xs={6} sm={6} md={4} key={index}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+              <Box 
+                sx={{
+                  overflow: 'hidden', 
+                  borderRadius: '8px', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  '&:hover': {
+                    transform: 'scale(1.05)', 
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
+                  }
+                }}
+                onClick={(e) => {
+                  if (showScrollHint) {
+                    e.preventDefault();
+                  }
+                }}
               >
-                <Box 
-                  sx={{
-                    overflow: 'hidden', 
-                    borderRadius: '8px', 
-                    transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                    '&:hover': {
-                      transform: 'scale(1.05)', 
-                      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                    }
-                  }}
-                  onClick={(e) => {
-                    if (showScrollHint) {
-                      e.preventDefault();
-                    }
-                  }}
-                >
-                  <a href={store.url} target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src={store.image} 
-                      alt={store.name} 
-                      style={{ width: '100%', borderRadius: '8px' }} 
-                    />
-                  </a>
-                </Box>
-              </motion.div>
+                <a href={store.url} target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src={store.image} 
+                    alt={store.name} 
+                    style={{ width: '100%', borderRadius: '8px' }} 
+                  />
+                </a>
+              </Box>
             </Grid>
           ))}
         </Grid>
       </Container>
-    </motion.div>
+    </div>
   );
 }
 

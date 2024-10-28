@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Grid, Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import MapDialog from './MapDialog'; // Importamos el componente MapDialog
@@ -11,32 +11,9 @@ function HomePage() {
   // Estado para controlar la visibilidad de MapDialog
   const [isMapDialogOpen, setIsMapDialogOpen] = useState(false);
 
-  // Imágenes de banners para rotar (sin el video en desktop)
-  const desktopBanners = [
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-pc2.webp?v=1',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1'
-  ];
-
-  // Imágenes de banners para móvil (incluye el video)
-  const mobileBanners = [
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/irrelevant-celular2.webp?v=1',
-    'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1',
-  ];
-
-  const [currentBannerIndex, setCurrentBannerIndex] = useState(0);
-
-  // Configurar el cambio de banners
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const banners = isMobile ? mobileBanners : desktopBanners;
-      setCurrentBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isMobile, desktopBanners.length, mobileBanners.length]);
-
-  // Determinar el banner actual y si es video
-  const currentBanner = isMobile ? mobileBanners[currentBannerIndex] : desktopBanners[currentBannerIndex];
-  const isVideo = currentBanner.endsWith('.mp4');
+  // Banner único para PC y móvil
+  const desktopBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-pc.webp?v=1';
+  const mobileBanner = 'https://storage.googleapis.com/comprobantes-madriguera/multimediaFeria/webp/principal-celuar.webp?v=1';
 
   const handleCategoryClick = (category) => {
     navigate(`/categoria/${category}`);
@@ -61,31 +38,17 @@ function HomePage() {
 
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 2 }}>
-      {/* Banner principal superior con cambio automático */}
+      {/* Banner principal único */}
       <Box sx={{ mb: 4 }}>
-        {isVideo ? (
-          <video
-            src={currentBanner}
-            autoPlay
-            muted
-            loop
-            style={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: '8px',
-            }}
-          />
-        ) : (
-          <img
-            src={currentBanner}
-            alt="Banner Tutores"
-            style={{
-              width: '100%',
-              height: 'auto',
-              borderRadius: '8px',
-            }}
-          />
-        )}
+        <img
+          src={isMobile ? mobileBanner : desktopBanner}
+          alt="Banner Tutores"
+          style={{
+            width: '100%',
+            height: 'auto',
+            borderRadius: '8px',
+          }}
+        />
       </Box>
 
       {/* Sección principal con categorías y banner único */}
@@ -108,11 +71,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('accesorios')}
@@ -131,11 +89,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('cuidado')}
@@ -154,11 +107,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('moda')}
@@ -177,11 +125,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('postres')}
@@ -200,11 +143,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('salado')}
@@ -223,11 +161,6 @@ function HomePage() {
                 sx={{
                   overflow: 'hidden', 
                   borderRadius: '8px', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  '&:hover': {
-                    transform: 'scale(1.05)',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                  },
                   cursor: 'pointer'
                 }}
                 onClick={() => handleCategoryClick('hobbies')}
@@ -280,7 +213,6 @@ function HomePage() {
                 right: '45px',
                 height: '40px',
                 width: '40px',
-                animation: 'bounce 2s infinite',
               }}
             />
           </Box>
@@ -302,22 +234,6 @@ function HomePage() {
           }}
         />
       </Box>
-
-      <style>
-        {
-          `@keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-              transform: translateY(0);
-            }
-            40% {
-              transform: translateY(-10px);
-            }
-            60% {
-              transform: translateY(-5px);
-            }
-          }`
-        }
-      </style>
     </Container>
   );
 }
