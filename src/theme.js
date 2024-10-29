@@ -37,7 +37,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: '#373B83', // Color de fondo temporal
+          backgroundColor: '#203152', // Color de fondo temporal
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
